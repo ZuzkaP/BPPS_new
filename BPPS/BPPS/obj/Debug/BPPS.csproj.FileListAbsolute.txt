@@ -1,0 +1,276 @@
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\csc.exe
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\vbc.exe
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll.config
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.pdb
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Owin.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\WebGrease.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.dll
+C:\Users\PC\Downloads\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.pdb
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\csc.exe
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\vbc.exe
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll.config
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.pdb
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Owin.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\WebGrease.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.dll
+C:\Users\PC\Downloads\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.pdb
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\csc.exe
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\vbc.exe
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll.config
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.pdb
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Owin.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\WebGrease.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.dll
+C:\Users\Zuzana\Source\Repos\BPPS-master23_10\BPPS\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.pdb
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\csc.exe
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\vbc.exe
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll.config
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\BPPS.pdb
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Owin.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\WebGrease.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Helpers.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Mvc.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Optimization.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.Razor.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.dll
+C:\Users\PC\Downloads\BPPS-master (zuzka)\BPPS-master\BPPS-master_2\BPPS-master\BPPS-master\BPPS\BPPS\obj\Debug\BPPS.pdb
