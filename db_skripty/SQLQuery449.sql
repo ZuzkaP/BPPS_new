@@ -1,0 +1,1 @@
+﻿select * into [dbo].[temp_projects] FROM [dbo].[Projects]; 

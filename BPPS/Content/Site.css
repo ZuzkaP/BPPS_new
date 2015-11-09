@@ -1,0 +1,163 @@
+﻿body {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+a.site-logo {
+    background: url(~/Content/Images/logo_siemens.png) no-repeat top left;
+    display: block;
+    width: 150px;
+    height: 85px;
+    text-indent: -9999px; /*hides the link text*/
+}
+nav li:hover{
+    background-color: white;
+    color:black;
+}
+.nav:after {
+    display:block;
+    clear:both;
+}
+ 
+.navbar-collapse {
+    margin:0px auto;
+}
+ 
+.navbar-collapse li {
+    margin:0px;
+    list-style:none;
+    font-family:'Ek Mukta';
+}
+ 
+.navbar-collapse a {
+    transition:all linear 0.15s;
+    color:#919191;
+}
+ 
+.navbar-collapse li:hover > a, .navbar-collapse .current-item > a {
+    text-decoration:none;
+    color:#be5b70;
+}
+ 
+.navbar-collapse .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+ 
+/*----- Top Level -----*/
+.navbar-collapse > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:19px;
+}
+ 
+.navbar-collapse > ul > li > a {
+   // padding:10px 40px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+ 
+.navbar-collapse > ul > li:hover > a, .navbar-collapse > ul > .current-item > a {
+    background:#2e2728;
+}
+ 
+/*----- Bottom Level -----*/
+.navbar-collapse li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background-color:whitesmoke;
+    color:black;
+}
+.newFeedbackTable{
+    border-radius: 10px;
+    background-color: whitesmoke;
+    width: 800px;
+}
+
+.newFeedbackTable td{
+    border-radius: 10px;
+    background-color: whitesmoke;
+    text-align:center;
+    padding: 10px;
+    font-size: 120%;
+}
+.newFeedbackTable th{
+    background-color: darkblue;
+    color:white;
+    text-align: center;
+    font-size:120%;
+    padding: 15px;
+}
+.newFeedbackTable .thRow{
+    border-radius:inherit;
+}
+.itemTableCenter{
+    text-align:center;
+}
+.addQuestionHref{
+    text-decoration:none;
+    font-family:cursive;
+    font-size: 120%;
+    color:blue;
+}
+.addQuestionHref:hover{
+    font-size: 150%;
+    color:darkblue;
+    background-color:whitesmoke;
+}
+
+.Roles{
+    display:block;
+    margin-left: 140px;
+    width:350px;
+}

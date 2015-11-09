@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BPPS.Models.feedback_questions>
+
+@{
+    ViewBag.Title = "Feedback form";
+}
+
+<h2>FeedbackForm</h2>
+
+<div class="center_form">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>feedback_questions</h4>
+        @foreach (var item in Model)
+        {
+        <hr />
+        <div class="form-group">
+            @Html.Label(item.questions.question)
+            <div class="col-md-10">
+                <label>@Html.RadioButton(item.question_id.ToString(), 1) 1 </label>&nbsp;&nbsp;
+                <label>@Html.RadioButton(item.question_id.ToString(), 2) 2 </label>&nbsp;&nbsp;
+                <label>@Html.RadioButton(item.question_id.ToString(), 3) 3 </label>&nbsp;&nbsp;
+                <label>@Html.RadioButton(item.question_id.ToString(), 4) 4 </label>&nbsp;&nbsp;
+                <label>@Html.RadioButton(item.question_id.ToString(), 5) 5 </label>
+            </div>
+            <div class="col col-md-10">
+                <label>comment: @Html.TextArea(item.question_id.ToString() + "_comment") </label>
+            </div>
+        </div>
+        }
+       <input type="hidden" name="feedback_id" value="@ViewBag.feedback_id">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Send" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+</div>
