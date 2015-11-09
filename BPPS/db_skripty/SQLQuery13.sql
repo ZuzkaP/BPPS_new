@@ -1,0 +1,1 @@
+﻿INSERT INTO Users_projects VALUES('55f8d24e-1a89-4261-ae4f-95ec2d2494fe', 1, 'product owner');

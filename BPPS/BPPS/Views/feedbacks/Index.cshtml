@@ -1,0 +1,139 @@
+﻿@model IEnumerable<BPPS.Models.feedbacks>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of feedbacks</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<h3> Feedbacks on my projects </h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Project ID")
+        </th>
+        <th>
+            @Html.DisplayName("Project Name")
+        </th>
+        <th>
+            @Html.DisplayName("Feedback initiated")
+        </th>
+        <th>
+            @Html.DisplayName("Feedback received")
+        </th>
+        <th>
+            @Html.DisplayName("Business Partner Representative")
+        </th>
+        <th>
+            @Html.DisplayName("Business Partner Email")
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var feedback in ViewBag.myFeedbacks)
+    {
+        <tr>
+            <td>
+                @feedback.project_id
+            </td>
+            <td>
+                @feedback.Projects.name
+            </td>
+            <td>
+                @feedback.initiated
+            </td>
+            <td>
+                @feedback.received
+            </td>
+            <td>
+                @feedback.AspNetUsers.FirstName
+                @feedback.AspNetUsers.LastName
+            </td>
+            <td>
+                @feedback.AspNetUsers.Email
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id =feedback.feedback_id })
+            </td>
+            <td>
+                <img src="~/Content/Images/pdf_download.png" width="30" height="30" />
+            </td>
+            <td>
+                <img src="~/Content/Images/excel_download.png" width="30" height="30" />
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<h3>All feedbacks</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Project ID")
+        </th>
+        <th>
+            @Html.DisplayName("Project Name")
+        </th>
+        <th>
+            @Html.DisplayName("Feedback initiated")
+        </th>
+        <th>
+            @Html.DisplayName("Feedback received")
+        </th>
+        <th>
+            @Html.DisplayName("Business Partner Representative")
+        </th>
+        <th>
+            @Html.DisplayName("Business Partner Email")
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Projects.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.initiated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.received)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName)
+            @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.feedback_id }) 
+        </td>
+        <td>
+            <img src="~/Content/Images/pdf_download.png" width="30" height="30" />
+        </td>
+        <td>
+            <img src="~/Content/Images/excel_download.png" width="30" height="30"/>
+        </td>
+    </tr>
+}
+
+</table>
