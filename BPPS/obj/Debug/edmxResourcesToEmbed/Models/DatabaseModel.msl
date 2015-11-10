@@ -2,8 +2,8 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="C__MigrationHistory">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.C__MigrationHistory)">
-        <MappingFragment StoreEntitySet="C__MigrationHistory">
+      <EntityTypeMapping TypeName="Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
           <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
           <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
           <ScalarProperty Name="Model" ColumnName="Model" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetRoles">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.AspNetRoles)">
+      <EntityTypeMapping TypeName="Model.AspNetRoles">
         <MappingFragment StoreEntitySet="AspNetRoles">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -20,7 +20,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserClaims">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.AspNetUserClaims)">
+      <EntityTypeMapping TypeName="Model.AspNetUserClaims">
         <MappingFragment StoreEntitySet="AspNetUserClaims">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserLogins">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.AspNetUserLogins)">
+      <EntityTypeMapping TypeName="Model.AspNetUserLogins">
         <MappingFragment StoreEntitySet="AspNetUserLogins">
           <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
           <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
@@ -39,8 +39,10 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUsers">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.AspNetUsers)">
+      <EntityTypeMapping TypeName="Model.AspNetUsers">
         <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
@@ -53,13 +55,11 @@
           <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
           <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="departments">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.departments)">
+      <EntityTypeMapping TypeName="Model.departments">
         <MappingFragment StoreEntitySet="departments">
           <ScalarProperty Name="department_id" ColumnName="department_id" />
           <ScalarProperty Name="location_id" ColumnName="location_id" />
@@ -69,7 +69,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="feedback_questions">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.feedback_questions)">
+      <EntityTypeMapping TypeName="Model.feedback_questions">
         <MappingFragment StoreEntitySet="feedback_questions">
           <ScalarProperty Name="question_id" ColumnName="question_id" />
           <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
@@ -79,7 +79,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="feedbacks">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.feedbacks)">
+      <EntityTypeMapping TypeName="Model.feedbacks">
         <MappingFragment StoreEntitySet="feedbacks">
           <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
           <ScalarProperty Name="initiated" ColumnName="initiated" />
@@ -90,7 +90,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="locations">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.locations)">
+      <EntityTypeMapping TypeName="Model.locations">
         <MappingFragment StoreEntitySet="locations">
           <ScalarProperty Name="location_id" ColumnName="location_id" />
           <ScalarProperty Name="town" ColumnName="town" />
@@ -99,7 +99,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Projects">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.Projects)">
+      <EntityTypeMapping TypeName="Model.Projects">
         <MappingFragment StoreEntitySet="Projects">
           <ScalarProperty Name="project_id" ColumnName="project_id" />
           <ScalarProperty Name="acronym" ColumnName="acronym" />
@@ -113,7 +113,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="questions">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.questions)">
+      <EntityTypeMapping TypeName="Model.questions">
         <MappingFragment StoreEntitySet="questions">
           <ScalarProperty Name="question_id" ColumnName="question_id" />
           <ScalarProperty Name="question" ColumnName="question" />
@@ -121,14 +121,14 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Table">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.Table)">
+      <EntityTypeMapping TypeName="Model.Table">
         <MappingFragment StoreEntitySet="Table">
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users_projects">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.Users_projects)">
+      <EntityTypeMapping TypeName="Model.Users_projects">
         <MappingFragment StoreEntitySet="Users_projects">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="project_id" ColumnName="project_id" />
@@ -136,27 +136,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="userRoles">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.userRoles)">
-        <MappingFragment StoreEntitySet="userRoles">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserRoles">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.AspNetUserRoles)">
+      <EntityTypeMapping TypeName="Model.AspNetUserRoles">
         <MappingFragment StoreEntitySet="AspNetUserRoles">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="userRoles1Set">
-      <EntityTypeMapping TypeName="IsTypeOf(Model.userRoles1)">
-        <MappingFragment StoreEntitySet="userRoles1Set">
           <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

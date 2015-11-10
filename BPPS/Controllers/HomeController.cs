@@ -19,7 +19,6 @@ namespace BPPS.Controllers
 
         public ActionResult Index()
         {
-           // ViewBag.role = db.AspNetUsers.Include(a => a.AspNetRoles).Where(a => a.AspNetRoles == "admin")
             string sessionUserId = User.Identity.GetUserId();
             this.newFeedbacks = db.feedbacks
                 .Where(f => f.Id == sessionUserId).

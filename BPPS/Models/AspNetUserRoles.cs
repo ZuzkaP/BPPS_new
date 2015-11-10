@@ -17,7 +17,7 @@ namespace BPPS.Models
         public string UserId { get; set; }
         public string RoleId { get; set; }
     
-        public virtual AspNetUsers AspNetUsers { get; set; }
         public virtual AspNetRoles AspNetRoles { get; set; }
+        public virtual AspNetUsers AspNetUsers { get; set; }
     }
 }

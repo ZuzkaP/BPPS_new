@@ -70,7 +70,6 @@ namespace BPPS.Controllers
         {
             if (!ModelState.IsValid)
             {
-                
                 return View(model);
             }
 

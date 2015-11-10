@@ -28,14 +28,9 @@
         <AssociationConnector Association="Model.FK__feedback___feedb__02FC7413" />
         <AssociationConnector Association="Model.FK__feedback___quest__02084FDA" />
         <AssociationConnector Association="Model.FK__feedbacks__Id__14270015" />
-        <EntityTypeShape EntityType="Model.AspNetUserRoles" PointX="0.5" PointY="5.375" Width="1.5" />
-        <AssociationConnector Association="Model.FK__AspNetUserRoles__RoleI__3E1D39E1" />
-        <AssociationConnector Association="Model.FK__AspNetUserRoles__UserI__3F115E1A" />
-        <AssociationConnector Association="Model.FK__AspNetUse__UserI__29221CFB" />
-        <EntityTypeShape EntityType="Model.userRoles1" Width="1.5" PointX="1.125" PointY="0.5" />
-        <AssociationConnector Association="Model.FK__userRoles__RoleI__4D5F7D71" />
-        <AssociationConnector Association="Model.FK__userRoles__UserI__607251E5" />
-        <AssociationConnector Association="Model.FK__AspNetUse__RoleI__74794A92" />
+        <EntityTypeShape EntityType="Model.AspNetUserRoles" Width="1.5" PointX="0.5" PointY="5.5" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

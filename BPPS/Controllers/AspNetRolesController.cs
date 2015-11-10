@@ -10,116 +10,107 @@ using BPPS.Models;
 
 namespace BPPS.Controllers
 {
-    public class AspNetUserRolesController : Controller
+    public class AspNetRolesController : Controller
     {
         private Entities db = new Entities();
 
-        // GET: AspNetUserRoles
+        // GET: AspNetRoles
         public ActionResult Index()
         {
-            var aspNetUserRoles = db.AspNetUserRoles.Include(a => a.AspNetRoles).Include(a => a.AspNetUsers);
-            return View(aspNetUserRoles.ToList());
+            return View(db.AspNetRoles.ToList());
         }
 
-        // GET: AspNetUserRoles/Details/5
+        // GET: AspNetRoles/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AspNetUserRoles aspNetUserRoles = db.AspNetUserRoles.Find(id);
-            if (aspNetUserRoles == null)
+            AspNetRoles aspNetRoles = db.AspNetRoles.Find(id);
+            if (aspNetRoles == null)
             {
                 return HttpNotFound();
             }
-            return View(aspNetUserRoles);
+            return View(aspNetRoles);
         }
 
-        // GET: AspNetUserRoles/Create
+        // GET: AspNetRoles/Create
         public ActionResult Create()
         {
-            ViewBag.RoleId = new SelectList(db.AspNetRoles, "Id", "Name");
-            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email");
             return View();
         }
 
-        // POST: AspNetUserRoles/Create
+        // POST: AspNetRoles/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,RoleId")] AspNetUserRoles aspNetUserRoles)
+        public ActionResult Create([Bind(Include = "Id,Name")] AspNetRoles aspNetRoles)
         {
             if (ModelState.IsValid)
             {
-                db.AspNetUserRoles.Add(aspNetUserRoles);
+                db.AspNetRoles.Add(aspNetRoles);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.RoleId = new SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId);
-            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email", aspNetUserRoles.UserId);
-            return View(aspNetUserRoles);
+            return View(aspNetRoles);
         }
 
-        // GET: AspNetUserRoles/Edit/5
+        // GET: AspNetRoles/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AspNetUserRoles aspNetUserRoles = db.AspNetUserRoles.Find(id);
-            if (aspNetUserRoles == null)
+            AspNetRoles aspNetRoles = db.AspNetRoles.Find(id);
+            if (aspNetRoles == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.RoleId = new SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId);
-            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email", aspNetUserRoles.UserId);
-            return View(aspNetUserRoles);
+            return View(aspNetRoles);
         }
 
-        // POST: AspNetUserRoles/Edit/5
+        // POST: AspNetRoles/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,RoleId")] AspNetUserRoles aspNetUserRoles)
+        public ActionResult Edit([Bind(Include = "Id,Name")] AspNetRoles aspNetRoles)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(aspNetUserRoles).State = EntityState.Modified;
+                db.Entry(aspNetRoles).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.RoleId = new SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId);
-            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email", aspNetUserRoles.UserId);
-            return View(aspNetUserRoles);
+            return View(aspNetRoles);
         }
 
-        // GET: AspNetUserRoles/Delete/5
+        // GET: AspNetRoles/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AspNetUserRoles aspNetUserRoles = db.AspNetUserRoles.Find(id);
-            if (aspNetUserRoles == null)
+            AspNetRoles aspNetRoles = db.AspNetRoles.Find(id);
+            if (aspNetRoles == null)
             {
                 return HttpNotFound();
             }
-            return View(aspNetUserRoles);
+            return View(aspNetRoles);
         }
 
-        // POST: AspNetUserRoles/Delete/5
+        // POST: AspNetRoles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            AspNetUserRoles aspNetUserRoles = db.AspNetUserRoles.Find(id);
-            db.AspNetUserRoles.Remove(aspNetUserRoles);
+            AspNetRoles aspNetRoles = db.AspNetRoles.Find(id);
+            db.AspNetRoles.Remove(aspNetRoles);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

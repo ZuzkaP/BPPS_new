@@ -23,7 +23,6 @@ namespace BPPS.Controllers
             int[] ids = new int[] { };
             string sessionId = User.Identity.GetUserId();
             List<int> user_projects;
-            
             user_projects = db.Users_projects.Where(up => up.Id == sessionId && up.project_role != "partner").Select(up => up.project_id).ToList();
             ViewBag.myFeedbacks = db.feedbacks.Where(f => user_projects.Any(p => p == f.project_id)).ToList();
             return View(db.feedbacks.ToList());

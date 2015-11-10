@@ -38,8 +38,6 @@ namespace BPPS.Models
         public virtual DbSet<questions> questions { get; set; }
         public virtual DbSet<Table> Table { get; set; }
         public virtual DbSet<Users_projects> Users_projects { get; set; }
-        public virtual DbSet<userRoles> userRoles { get; set; }
         public virtual DbSet<AspNetUserRoles> AspNetUserRoles { get; set; }
-        public virtual DbSet<userRoles1> userRoles1Set { get; set; }
     }
 }

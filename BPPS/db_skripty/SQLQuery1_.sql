@@ -1,1 +1,0 @@
-﻿INSERT INTO AspNetRoles VALUES(1,'admin');

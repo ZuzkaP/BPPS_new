@@ -1,1 +1,0 @@
-﻿INSERT INTO questions VALUES('How easy was it to buy from us?');

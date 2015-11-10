@@ -16,7 +16,7 @@
     </Key>
     <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="AspNetUserRoles" Relationship="Model.FK__AspNetUse__RoleI__74794A92" FromRole="AspNetRoles" ToRole="AspNetUserRoles" />
+    <NavigationProperty Name="AspNetUserRoles" Relationship="Model.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" FromRole="AspNetRoles" ToRole="AspNetUserRoles" />
   </EntityType>
   <EntityType Name="AspNetUserClaims">
     <Key>
@@ -61,7 +61,7 @@
     <NavigationProperty Name="feedbacks" Relationship="Model.FK__feedbacks__Id__14270015" FromRole="AspNetUsers" ToRole="feedbacks" />
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="AspNetUserRoles" Relationship="Model.FK__AspNetUse__UserI__29221CFB" FromRole="AspNetUsers" ToRole="AspNetUserRoles" />
+    <NavigationProperty Name="AspNetUserRoles" Relationship="Model.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserRoles" />
   </EntityType>
   <EntityType Name="departments">
     <Key>
@@ -267,31 +267,13 @@
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="feedbacks" EntitySet="feedbacks" />
     </AssociationSet>
-    <EntitySet Name="userRoles" EntityType="Model.userRoles" />
-    <AssociationSet Name="FK__userRoles__RoleI__3E1D39E1" Association="Model.FK__userRoles__RoleI__3E1D39E1">
-      <End EntitySet="AspNetRoles" Role="AspNetRoles" />
-      <End EntitySet="userRoles" Role="userRoles" />
-    </AssociationSet>
-    <AssociationSet Name="FK__userRoles__UserI__3F115E1A" Association="Model.FK__userRoles__UserI__3F115E1A">
-      <End EntitySet="AspNetUsers" Role="AspNetUsers" />
-      <End EntitySet="userRoles" Role="userRoles" />
-    </AssociationSet>
     <EntitySet Name="AspNetUserRoles" EntityType="Model.AspNetUserRoles" />
-    <AssociationSet Name="FK__AspNetUse__UserI__29221CFB" Association="Model.FK__AspNetUse__UserI__29221CFB">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Model.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
       <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
     </AssociationSet>
-    <EntitySet Name="userRoles1Set" EntityType="Model.userRoles1" />
-    <AssociationSet Name="FK__userRoles__RoleI__4D5F7D71" Association="Model.FK__userRoles__RoleI__4D5F7D71">
-      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
-      <End Role="userRoles1" EntitySet="userRoles1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK__userRoles__UserI__607251E5" Association="Model.FK__userRoles__UserI__607251E5">
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Model.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="userRoles1" EntitySet="userRoles1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK__AspNetUse__RoleI__74794A92" Association="Model.FK__AspNetUse__RoleI__74794A92">
-      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
       <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
     </AssociationSet>
   </EntityContainer>
@@ -355,40 +337,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="userRoles">
-    <Key>
-      <PropertyRef Name="UserId" />
-      <PropertyRef Name="RoleId" />
-    </Key>
-    <Property Name="UserId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
-    <Property Name="RoleId" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" Type="String" />
-    <NavigationProperty Name="AspNetRoles" Relationship="Model.FK__userRoles__RoleI__3E1D39E1" FromRole="userRoles" ToRole="AspNetRoles" />
-    <NavigationProperty Name="AspNetUsers" Relationship="Model.FK__userRoles__UserI__3F115E1A" FromRole="userRoles" ToRole="AspNetUsers" />
-  </EntityType>
-  <Association Name="FK__userRoles__RoleI__3E1D39E1">
-    <End Type="Model.AspNetRoles" Multiplicity="1" Role="AspNetRoles" />
-    <End Type="Model.userRoles" Multiplicity="*" Role="userRoles" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetRoles">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="userRoles">
-        <PropertyRef Name="RoleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__userRoles__UserI__3F115E1A">
-    <End Type="Model.AspNetUsers" Multiplicity="1" Role="AspNetUsers" />
-    <End Type="Model.userRoles" Multiplicity="*" Role="userRoles" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="userRoles">
-        <PropertyRef Name="UserId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="AspNetUserRoles">
     <Key>
       <PropertyRef Name="UserId" />
@@ -396,57 +344,13 @@
     </Key>
     <Property Name="UserId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="RoleId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="AspNetUsers" Relationship="Model.FK__AspNetUse__UserI__29221CFB" FromRole="AspNetUserRoles" ToRole="AspNetUsers" />
-    <NavigationProperty Name="AspNetRoles" Relationship="Model.FK__AspNetUse__RoleI__74794A92" FromRole="AspNetUserRoles" ToRole="AspNetRoles" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Model.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" FromRole="AspNetUserRoles" ToRole="AspNetRoles" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Model.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" FromRole="AspNetUserRoles" ToRole="AspNetUsers" />
   </EntityType>
-  <Association Name="FK__AspNetUse__UserI__29221CFB">
-    <End Type="Model.AspNetUsers" Role="AspNetUsers" Multiplicity="1" />
-    <End Type="Model.AspNetUserRoles" Role="AspNetUserRoles" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="AspNetUserRoles">
-        <PropertyRef Name="UserId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="userRoles1">
-    <Key>
-      <PropertyRef Name="UserId" />
-      <PropertyRef Name="RoleId" />
-    </Key>
-    <Property Name="UserId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="RoleId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="AspNetRoles" Relationship="Model.FK__userRoles__RoleI__4D5F7D71" FromRole="userRoles1" ToRole="AspNetRoles" />
-    <NavigationProperty Name="AspNetUsers" Relationship="Model.FK__userRoles__UserI__607251E5" FromRole="userRoles1" ToRole="AspNetUsers" />
-  </EntityType>
-  <Association Name="FK__userRoles__RoleI__4D5F7D71">
-    <End Type="Model.AspNetRoles" Role="AspNetRoles" Multiplicity="1" />
-    <End Type="Model.userRoles1" Role="userRoles1" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetRoles">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="userRoles1">
-        <PropertyRef Name="RoleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__userRoles__UserI__607251E5">
-    <End Type="Model.AspNetUsers" Role="AspNetUsers" Multiplicity="1" />
-    <End Type="Model.userRoles1" Role="userRoles1" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="userRoles1">
-        <PropertyRef Name="UserId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__AspNetUse__RoleI__74794A92">
-    <End Type="Model.AspNetRoles" Role="AspNetRoles" Multiplicity="1" />
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Type="Model.AspNetRoles" Role="AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="Model.AspNetUserRoles" Role="AspNetUserRoles" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AspNetRoles">
@@ -454,6 +358,20 @@
       </Principal>
       <Dependent Role="AspNetUserRoles">
         <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Type="Model.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.AspNetUserRoles" Role="AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
