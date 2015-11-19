@@ -15,9 +15,85 @@ namespace BPPS.Controllers
         private Entities db = new Entities();
 
         // GET: Projects
-        public ActionResult Index()
+        public ActionResult Index(string location, string segment, string subSegment, string bpssStatus, string status)
         {
-            return View(db.Projects.ToList());
+            var projects = from m in db.Projects.ToList()
+                           select m;
+
+            var locationList = new List<string>();
+            var locationQry = from d in db.Projects.ToList()
+                              orderby d.departments.locations.country
+                              select d.departments.locations.country;
+
+            locationList.AddRange(locationQry.Distinct());
+            ViewBag.location = new SelectList(locationList);
+
+            var segmentList = new List<string>();
+            var segmentQry = from d in db.Projects.ToList()
+                             orderby d.departments.name
+                             select d.departments.name;
+
+            segmentList.AddRange(segmentQry.Distinct());
+            ViewBag.segment = new SelectList(segmentList);
+
+            var subSegmentList = new List<string>();
+            var subSegmentQry = from d in db.Projects.ToList()
+                                orderby d.departments.name
+                                select d.departments.name;
+
+            subSegmentList.AddRange(subSegmentQry.Distinct());
+            ViewBag.subSegment = new SelectList(subSegmentList);
+
+            //db.feedbacks.Where(f => f.projects.project_name == 'BPSS').toList()
+
+            var bpssStatusList = new List<string>();
+            var bpssStatusQry = from d in db.Projects.ToList()
+                                orderby d.status
+                                select d.status;
+
+            bpssStatusList.AddRange(bpssStatusQry.Distinct());
+            ViewBag.bpssStatus = new SelectList(bpssStatusList);
+
+            var statusList = new List<string>();
+            var statusQry = from d in db.Projects.ToList()
+                            orderby d.status
+                            select d.status;
+
+
+            statusList.AddRange(statusQry.Distinct());
+            ViewBag.status = new SelectList(statusList);
+
+            if (!String.IsNullOrEmpty(location))
+            {
+                projects = projects.Where(s => s.departments.locations.country.ToUpper() == location.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(segment))
+            {
+                projects = projects.Where(s => s.departments.name.ToUpper() == segment.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(subSegment))
+            {
+                projects = projects.Where(s => s.departments.name.ToUpper() == subSegment.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(bpssStatus))
+            {
+                projects = projects.Where(s => s.status.ToUpper() == bpssStatus.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(status))
+            {
+                projects = projects.Where(s => s.status.ToUpper() == status.ToUpper());
+            }
+
+            List<int> user_projects;
+            user_projects = db.Users_projects.Where(up => up.project_role != "partner").Select(up => up.project_id).ToList();
+
+            ViewBag.myProject = db.Projects.Where(f => user_projects.Any(p => p == f.project_id)).ToList();
+            //return View(db.Projects.ToList());
+            return View(projects.ToList());
         }
 
         // GET: Projects/Details/5

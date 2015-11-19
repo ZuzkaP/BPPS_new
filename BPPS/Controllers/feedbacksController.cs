@@ -18,13 +18,24 @@ namespace BPPS.Controllers
         private Entities db = new Entities();
 
         // GET: feedbacks
-        public ActionResult Index()
+        public ActionResult Index(string project_name)
         {
+            var feedbacks = from m in db.feedbacks select m;
+            var projects = from m in db.Projects.ToList()
+                           select m;
+
             int[] ids = new int[] { };
             string sessionId = User.Identity.GetUserId();
             List<int> user_projects;
             user_projects = db.Users_projects.Where(up => up.Id == sessionId && up.project_role != "partner").Select(up => up.project_id).ToList();
             ViewBag.myFeedbacks = db.feedbacks.Where(f => user_projects.Any(p => p == f.project_id)).ToList();
+
+            if (!String.IsNullOrEmpty(project_name))
+            {
+                feedbacks = feedbacks.Where(s => projects.Any(p => p.name.ToUpper().Contains(project_name.ToUpper())));
+            }
+
+
             return View(db.feedbacks.ToList());
         }
 

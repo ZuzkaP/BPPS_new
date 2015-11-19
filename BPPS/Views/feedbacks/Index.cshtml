@@ -10,6 +10,9 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
+
+
+
 <h3> Feedbacks on my projects </h3>
 <table class="table">
     <tr>
@@ -74,6 +77,15 @@
 
 </table>
 
+@using (Html.BeginForm())
+{
+    <p>
+        Project name: @Html.TextBox("project_name") <br />
+        <input type="submit" value="Filter" />
+    </p>
+}
+
+ 
 
 <h3>All feedbacks</h3>
 <table class="table">

@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BPPS.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Web.Security;
 
 namespace BPPS.Controllers
 {
@@ -18,11 +20,14 @@ namespace BPPS.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        RoleManager<IdentityRole> spravcaRoly = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new IdentityDbContext()));
+        UserManager<ApplicationUser> spravcaPouzivatelov = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+
         public AccountController()
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -34,9 +39,9 @@ namespace BPPS.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -79,8 +84,27 @@ namespace BPPS.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    TempData["infoRole"] = role;
-                    return RedirectToLocal(returnUrl);
+                    if (SignInManager.UserManager.IsInRole(spravcaPouzivatelov.FindByEmail(model.Email).Id, role))
+                    {
+                        try
+                        {
+                            spravcaRoly.Create(new IdentityRole(role));
+                            ApplicationUser pouzivatel = spravcaPouzivatelov.FindByEmail(model.Email);
+                            spravcaPouzivatelov.AddToRole(pouzivatel.Id, role);
+                        }
+                        catch
+                        {
+
+                        }
+                        return RedirectToLocal(returnUrl);
+                    }
+                    else
+                    {
+                        TempData["msg"] = "You have different role! Contact your admin.";
+                        AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+                        return View(model);
+                    }
+                        
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -90,6 +114,7 @@ namespace BPPS.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+
         }
 
         //
@@ -121,7 +146,7 @@ namespace BPPS.Controllers
             // If a user enters incorrect codes for a specified amount of time then the user account 
             // will be locked out for a specified amount of time. 
             // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -156,8 +181,8 @@ namespace BPPS.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
