@@ -549,3 +549,10 @@ C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Microsoft.Owin.Security.MicrosoftAcc
 C:\Users\Mayki\Desktop\BPPS-master\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
 C:\Users\Mayki\Desktop\BPPS-master\BPPS\obj\Debug\BPPS.dll
 C:\Users\Mayki\Desktop\BPPS-master\BPPS\obj\Debug\BPPS.pdb
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\DocumentFormat.OpenXml.dll
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\ExporterObjects.dll
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\iTextSharp.dll
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Westwind.RazorHosting.dll
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\ExporterObjects.pdb
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Westwind.RazorHosting.xml
+C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Rotativa.dll

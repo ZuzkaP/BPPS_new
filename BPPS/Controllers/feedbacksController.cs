@@ -9,7 +9,10 @@ using System.Web.Mvc;
 using BPPS.Models;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
-
+using System.Web.UI.WebControls;
+using System.IO;
+using Rotativa;
+using System.Web.UI;
 
 namespace BPPS.Controllers
 {
@@ -158,6 +161,37 @@ namespace BPPS.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        public ActionResult ExportData(int? id)
+        {
+            var datasource = db.feedback_questions.Where(f => f.feedback_id == id).ToList();
+
+            GridView gv = new GridView();
+            gv.DataSource = datasource;
+            gv.DataBind();
+            Response.ClearContent();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment; filename=Report.xls");
+            Response.ContentType = "application/ms-excel";
+            Response.Charset = "";
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter htw = new HtmlTextWriter(sw);
+            gv.RenderControl(htw);
+            Response.Output.Write(sw.ToString());
+            Response.Flush();
+            Response.End();
+
+            return Json("Success");
+        }
+
+        public ActionResult PrintPDF(int? id)
+        {
+            return new ActionAsPdf("Details", new { id = id })
+            {
+                FileName = "Report.pdf"
+            };
         }
     }
 }

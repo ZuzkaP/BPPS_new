@@ -5,10 +5,10 @@
 }
 
 <h2>@ViewBag.Title.</h2>
-@if (@TempData["msg"] != null)
+@if (@TempData["FailMsg"] != null)
 {
     <div class="alert alert-danger">
-        <b>Error: </b>@TempData["msg"]
+        <b>Error: </b>@TempData["FailMsg"]
     </div>
 }
     <div class="row">
