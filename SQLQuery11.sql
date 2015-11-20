@@ -1,0 +1,1 @@
+﻿UPDATE feedback_questions SET result=NULL;

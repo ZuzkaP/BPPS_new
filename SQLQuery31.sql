@@ -1,0 +1,1 @@
+﻿UPDATE feedbacks SET received=null WHERE feedback_id=2;
