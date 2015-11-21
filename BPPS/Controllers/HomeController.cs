@@ -48,15 +48,15 @@ namespace BPPS.Controllers
             return View();
         }
 
-        public virtual ActionResult ExportTo(int id)
-        {
-            List<Export> list = Export.GetData();
-            ExportList<Export> exp = new ExportList<Export>();
-            exp.PathTemplateFolder = Server.MapPath("~/Export");
+        //public virtual ActionResult ExportTo(int id)
+        //{
+        //    List<Export> list = Export.GetData();
+        //    ExportList<Export> exp = new ExportList<Export>();
+        //    exp.PathTemplateFolder = Server.MapPath("~/Export");
 
-            string filePathExport = Server.MapPath("~/Export/a" + ExportBase.GetFileExtension((ExportToFormat)id));
-            exp.ExportTo(list, (ExportToFormat)id, filePathExport);
-            return this.File(filePathExport, "application/octet-stream", System.IO.Path.GetFileName(filePathExport));
-        }
+        //    string filePathExport = Server.MapPath("~/Export/a" + ExportBase.GetFileExtension((ExportToFormat)id));
+        //    exp.ExportTo(list, (ExportToFormat)id, filePathExport);
+        //    return this.File(filePathExport, "application/octet-stream", System.IO.Path.GetFileName(filePathExport));
+        //}
     }
 }
