@@ -88,11 +88,12 @@ namespace BPPS.Controllers
             {
                 projects = projects.Where(s => s.status.ToUpper() == status.ToUpper());
             }
+
             int pageSize = 5;
             int pageNumber = (page ?? 1);
             ViewBag.Count = projects.ToList().Count();
 
-            return View(projects.ToPagedList(pageNumber, pageSize));
+            return View(projects.OrderByDescending(p => p.project_id).ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult IndexMy(string location, string segment, string subSegment, string bpssStatus, string status)

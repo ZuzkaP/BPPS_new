@@ -3,20 +3,11 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "IndexMy";
 }
 
-<div class="page-header"><h2> All feedbacks</h2></div>
+<div class="page-header"><h2> My feedbacks</h2></div>
 
-@using (Html.BeginForm())
-{
-    <p>
-        Project name: @Html.TextBox("project_name") <br />
-        <input type="submit" value="Filter" />
-    </p>
-}
-<br>
-<h3 style="margin-left:100px;">List of feedbacks</h3>
 <table class="table">
     <tr>
         <th>
@@ -59,27 +50,24 @@
             @Html.DisplayFor(modelItem => item.received)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName)
-            @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
+            @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { id=item.feedback_id }) 
+            @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
         </td>
         <td>
             <img src="~/Content/Images/pdf_download.png" width="30" height="30" />
         </td>
         <td>
-            <img src="~/Content/Images/excel_download.png" width="30" height="30"/>
+            <img src="~/Content/Images/excel_download.png" width="30" height="30" />
         </td>
     </tr>
 }
-
 </table>
-
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
-@Html.PagedListPager(Model, page => Url.Action("Index",
+@Html.PagedListPager(Model, page => Url.Action("IndexMy",
     new { page }))

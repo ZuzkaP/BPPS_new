@@ -16,10 +16,10 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <a href="@Url.Action("Index", "Home", "Home")" class="navbar-brand">
-                <img src="~/Content/Images/logo_siemens.png" title="title" alt="additional title" width=300 height=85 style="background-color:white;" />
-            </a>          
+        <a href="@Url.Action("Index", "Home", "Home")" class="navbar-brand">
+            <img src="~/Content/Images/logo_siemens.png" title="title" alt="additional title" style="background-color:transparent;" width=300 height=85" />
+        </a>
+        <div class="container">          
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -34,13 +34,22 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Administration", "Index", "departments")</li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
                             Feedbacks
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Create feedback", "Create", "feedbacks")</li>
-                            <li>@Html.ActionLink("List of feedbacks", "Index", "feedbacks")</li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="0">
+                                    Lis of feedbacks
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
+                                    <li>@Html.ActionLink("Feedbacks on my projects", "IndexOnMy", "feedbacks")</li>
+                                    <li>@Html.ActionLink("All feedbacks", "Index", "feedbacks")</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>   
                     <li class="dropdown">
@@ -52,7 +61,7 @@
                             <li>@Html.ActionLink("Add project", "Create", "Projects")</li>
                             <li class="dropdown-submenu">
                                 <a tabindex="0">
-                                    Lis of projects
+                                    List of projects
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>@Html.ActionLink("My projects", "IndexMy", "Projects")</li>

@@ -388,6 +388,8 @@
     <Content Include="Views\AspNetRoles\Edit.cshtml" />
     <Content Include="Views\AspNetRoles\Index.cshtml" />
     <Content Include="Views\Projects\IndexMy.cshtml" />
+    <Content Include="Views\feedbacks\IndexOnMy.cshtml" />
+    <Content Include="Views\feedbacks\IndexMy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

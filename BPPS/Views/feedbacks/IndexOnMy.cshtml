@@ -1,0 +1,77 @@
+﻿@model PagedList.IPagedList<BPPS.Models.feedbacks>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "IndexOnMy";
+}
+
+<div class="page-header"> <h1> Feedbacks on my projects </h1> </div>
+<br>
+<h2 style="margin-left:100px;"> List of feedbacks </h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Project ID")
+        </th>
+        <th>
+            @Html.DisplayName("Project Name")
+        </th>
+        <th>
+            @Html.DisplayName("Feedback initiated")
+        </th>
+        <th>
+            @Html.DisplayName("Feedback received")
+        </th>
+        <th>
+            @Html.DisplayName("Business Partner Representative")
+        </th>
+        <th>
+            @Html.DisplayName("Business Partner Email")
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.project_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Projects.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.initiated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.received)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.feedback_id})
+            </td>
+            <td>
+                <img src="~/Content/Images/pdf_download.png" width="30" height="30" />
+            </td>
+            <td>
+                <img src="~/Content/Images/excel_download.png" width="30" height="30" />
+            </td>
+        </tr>
+    }
+
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("IndexOnMy",
+    new { page }))
