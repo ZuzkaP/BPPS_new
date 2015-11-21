@@ -1,2 +1,2 @@
-﻿alter table departments add constraint "FK_is subsegment of" foreign key (dep_department_id)
-      references departments (department_id);
+﻿delete FROm feedback_questions WHERE feedback_id=3;
+delete FROm feedbacks WHERE feedback_id=3;

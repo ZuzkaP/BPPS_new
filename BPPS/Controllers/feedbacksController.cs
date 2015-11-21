@@ -38,7 +38,6 @@ namespace BPPS.Controllers
                 feedbacks = feedbacks.Where(s => projects.Any(p => p.name.ToUpper().Contains(project_name.ToUpper())));
             }
 
-
             return View(db.feedbacks.ToList());
         }
 
@@ -163,10 +162,9 @@ namespace BPPS.Controllers
             base.Dispose(disposing);
         }
 
-
         public ActionResult ExportData(int? id)
         {
-            var datasource = db.feedback_questions.Where(f => f.feedback_id == id).ToList();
+            var datasource = db.feedback_questions.Where(f => f.feedback_id == id).Select(f => new { f.questions.question, f.result, f.comment }).ToList();
 
             GridView gv = new GridView();
             gv.DataSource = datasource;
