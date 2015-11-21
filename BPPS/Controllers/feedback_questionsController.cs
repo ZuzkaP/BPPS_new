@@ -10,6 +10,7 @@ using BPPS.Models;
 
 namespace BPPS.Controllers
 {
+    //[Authorize(Roles = "admin")]
     public class feedback_questionsController : Controller
     {
         private Entities db = new Entities();
@@ -38,6 +39,7 @@ namespace BPPS.Controllers
         // GET: feedback_questions/Create/5
         public ActionResult Create(int? feedback_id)
         {
+            ViewBag.questions = db.questions.Select(q => q.question).ToList();
             ViewBag.question_id = new SelectList(db.questions, "question_id", "question");
             ViewBag.feedback_id = new SelectList(db.feedbacks.Where(f => f.feedback_id == feedback_id), "feedback_id", "feedback_id");                
             return View();

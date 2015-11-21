@@ -33,10 +33,10 @@ a.site-logo {
     height: 85px;
     text-indent: -9999px; /*hides the link text*/
 }
-nav li:hover{
-    background-color: white;
+/*nav li:hover{
+    background-color: green;
     color:black;
-}
+}*/
 .nav:after {
     display:block;
     clear:both;
@@ -57,10 +57,10 @@ nav li:hover{
     color:#919191;
 }
  
-.navbar-collapse li:hover > a, .navbar-collapse .current-item > a {
+/*.navbar-collapse li:hover > a, .navbar-collapse .current-item > a {
     text-decoration:none;
     color:#be5b70;
-}
+}*/
  
 .navbar-collapse .arrow {
     font-size:11px;
@@ -81,9 +81,9 @@ nav li:hover{
     text-shadow:0px 1px 0px rgba(0,0,0,0.4);
 }
  
-.navbar-collapse > ul > li:hover > a, .navbar-collapse > ul > .current-item > a {
+/*.navbar-collapse > ul > li:hover > a, .navbar-collapse > ul > .current-item > a {
     background:#2e2728;
-}
+}*/
  
 /*----- Bottom Level -----*/
 .navbar-collapse li:hover .sub-menu {
@@ -114,10 +114,10 @@ nav li:hover{
     display:block;
 }
  
-.sub-menu li a:hover, .sub-menu .current-item a {
+/*.sub-menu li a:hover, .sub-menu .current-item a {
     background-color:whitesmoke;
     color:black;
-}
+}*/
 .newFeedbackTable{
     border-radius: 10px;
     background-color: whitesmoke;
@@ -150,14 +150,28 @@ nav li:hover{
     font-size: 120%;
     color:blue;
 }
-.addQuestionHref:hover{
+/*.addQuestionHref:hover{
     font-size: 150%;
     color:darkblue;
     background-color:whitesmoke;
-}
+}*/
 
 .Roles{
     display:block;
     margin-left: 140px;
     width:350px;
+}
+.nav-margin{
+    margin-top: 64px;
+}
+
+.RoleLink1{
+    width:172px;
+    margin:-180px 0 0 0;
+    float:right;
+}
+.RoleLink2{
+    width:145px;
+    margin:-160px 0 0 0;
+    float:right;
 }

@@ -9,14 +9,10 @@ using System.Web.Mvc;
 using BPPS.Models;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
-using ExporterObjects;
-using System.Web.UI.WebControls;
-using System.IO;
-using System.Web.UI;
-using Rotativa;
 
 namespace BPPS.Controllers
 {
+    //[Authorize(Roles = "admin")]
     public class HomeController : Controller
     {
         private Entities db = new Entities();
@@ -47,16 +43,5 @@ namespace BPPS.Controllers
 
             return View();
         }
-
-        //public virtual ActionResult ExportTo(int id)
-        //{
-        //    List<Export> list = Export.GetData();
-        //    ExportList<Export> exp = new ExportList<Export>();
-        //    exp.PathTemplateFolder = Server.MapPath("~/Export");
-
-        //    string filePathExport = Server.MapPath("~/Export/a" + ExportBase.GetFileExtension((ExportToFormat)id));
-        //    exp.ExportTo(list, (ExportToFormat)id, filePathExport);
-        //    return this.File(filePathExport, "application/octet-stream", System.IO.Path.GetFileName(filePathExport));
-        //}
     }
 }

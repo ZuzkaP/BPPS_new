@@ -549,162 +549,370 @@ C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Microsoft.Owin.Security.MicrosoftAcc
 C:\Users\Mayki\Desktop\BPPS-master\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
 C:\Users\Mayki\Desktop\BPPS-master\BPPS\obj\Debug\BPPS.dll
 C:\Users\Mayki\Desktop\BPPS-master\BPPS\obj\Debug\BPPS.pdb
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\DocumentFormat.OpenXml.dll
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\ExporterObjects.dll
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\iTextSharp.dll
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Westwind.RazorHosting.dll
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\ExporterObjects.pdb
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Westwind.RazorHosting.xml
-C:\Users\Mayki\Desktop\BPPS-master\BPPS\bin\Rotativa.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\csc.exe
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\vbc.exe
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\VBCSCompiler.exe
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\BPPS.dll.config
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\BPPS.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\BPPS.pdb
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Antlr3.Runtime.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\DocumentFormat.OpenXml.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\EntityFramework.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\EntityFramework.SqlServer.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\ExporterObjects.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\iTextSharp.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Newtonsoft.Json.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Owin.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Rotativa.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Helpers.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Mvc.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Optimization.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Razor.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.WebPages.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.WebPages.Razor.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\WebGrease.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Westwind.RazorHosting.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\ExporterObjects.pdb
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Helpers.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Mvc.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Optimization.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.Razor.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.WebPages.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\System.Web.WebPages.Razor.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Antlr3.Runtime.pdb
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Westwind.RazorHosting.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Newtonsoft.Json.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\EntityFramework.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\EntityFramework.SqlServer.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\obj\Debug\BPPS.dll
-C:\Users\Mayki\Desktop\BPPS-master - kópia\BPPS\obj\Debug\BPPS.pdb
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\csc.exe
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\vbc.exe
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\VBCSCompiler.exe
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\BPPS.dll.config
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\BPPS.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\BPPS.pdb
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Antlr3.Runtime.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\DocumentFormat.OpenXml.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\EntityFramework.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\EntityFramework.SqlServer.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\ExporterObjects.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\iTextSharp.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Newtonsoft.Json.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Owin.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Rotativa.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Helpers.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Mvc.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Optimization.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Razor.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.WebPages.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.WebPages.Razor.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\WebGrease.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Westwind.RazorHosting.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\ExporterObjects.pdb
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Helpers.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Mvc.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Optimization.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.Razor.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.WebPages.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\System.Web.WebPages.Razor.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Antlr3.Runtime.pdb
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Westwind.RazorHosting.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Newtonsoft.Json.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\EntityFramework.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\EntityFramework.SqlServer.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\obj\Debug\BPPS.dll
-C:\Users\Mayki\Desktop\projekty\BPPS-master\BPPS\obj\Debug\BPPS.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\csc.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\vbc.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\BPPS.dll.config
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\BPPS.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\BPPS.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\EntityFramework.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Helpers.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Mvc.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Optimization.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Razor.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.WebPages.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\WebGrease.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Helpers.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Mvc.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Optimization.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.Razor.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.WebPages.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\EntityFramework.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\obj\Debug\BPPS.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\obj\Debug\BPPS.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\PagedList.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\PagedList.Mvc.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\PagedList.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master\BPPS\bin\PagedList.Mvc.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\csc.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\vbc.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\BPPS.dll.config
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\BPPS.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\BPPS.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\EntityFramework.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\PagedList.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\PagedList.Mvc.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Helpers.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Mvc.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Optimization.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Razor.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.WebPages.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\WebGrease.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\PagedList.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\PagedList.Mvc.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Helpers.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Mvc.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Optimization.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.Razor.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.WebPages.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\EntityFramework.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\obj\Debug\BPPS.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia\BPPS\obj\Debug\BPPS.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\csc.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\vbc.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\BPPS.dll.config
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\BPPS.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\BPPS.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Owin.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.Mvc.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Helpers.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Mvc.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Optimization.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Razor.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\WebGrease.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.Mvc.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Helpers.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Mvc.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Optimization.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Razor.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\obj\Debug\BPPS.dll
+C:\Users\PC\Downloads\BPPS_new-master (1)\BPPS_new-master - kópia - kópia (2)\BPPS\obj\Debug\BPPS.pdb
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\csc.exe
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\vbc.exe
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\BPPS.dll.config
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\BPPS.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\BPPS.pdb
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Owin.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.Mvc.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Helpers.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Mvc.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Optimization.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Razor.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\WebGrease.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\PagedList.Mvc.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Helpers.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Mvc.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Optimization.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.Razor.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\obj\Debug\BPPS.dll
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\obj\Debug\BPPS.pdb
+C:\Users\Mayki\Desktop\BPPS_new-master - kópia - kópia (2)\BPPS\bin\Rotativa.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\csc.exe
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\vbc.exe
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\BPPS.dll.config
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\BPPS.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\BPPS.pdb
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Antlr3.Runtime.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\EntityFramework.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\EntityFramework.SqlServer.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Newtonsoft.Json.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Owin.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\PagedList.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\PagedList.Mvc.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Rotativa.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Helpers.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Mvc.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Optimization.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Razor.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.WebPages.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\WebGrease.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\PagedList.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\PagedList.Mvc.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Helpers.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Mvc.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Optimization.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.Razor.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.WebPages.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Antlr3.Runtime.pdb
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Newtonsoft.Json.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\EntityFramework.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\EntityFramework.SqlServer.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\obj\Debug\BPPS.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\obj\Debug\BPPS.pdb

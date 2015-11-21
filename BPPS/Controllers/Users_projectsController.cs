@@ -10,6 +10,7 @@ using BPPS.Models;
 
 namespace BPPS.Controllers
 {
+    //[Authorize(Roles = "admin")]
     public class Users_projectsController : Controller
     {
         private Entities db = new Entities();

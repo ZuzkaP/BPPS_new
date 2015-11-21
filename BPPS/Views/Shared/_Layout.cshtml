@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-submenu.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-submenu.css.map" />
+    <link rel="stylesheet" href="~/Content/bootstrap-submenu.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-submenu.min.css.map" />
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -12,10 +16,10 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <a href="@Url.Action("Index", "Home", "Home")" class="navbar-brand">
-                <img src="~/Content/Images/logo_siemens.png" title="title" alt="additional title" width=300 height=85 style="background-color:white;" />
-            </a>          
+        <a href="@Url.Action("Index", "Home", "Home")" class="navbar-brand">
+            <img src="~/Content/Images/logo_siemens.png" title="title" alt="additional title" style="background-color:transparent;" width=300 height=85" />
+        </a>
+        <div class="container">          
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -24,28 +28,52 @@
                    
                 </button>
             </div>
-            <br><br><br>
-            <div class="navbar-collapse collapse">
+            <div class="nav-margin">
+        <!--    <div class="navbar-collapse collapse">-->
                 @if (User.Identity.IsAuthenticated){ 
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Administration", "Index", "departments")</li>
-                    <li>
-                        <a href="#">Feedbacks</a>
-                        <ul class="sub-menu">
-                            <li class="item">@Html.ActionLink("Create feedback", "Create", "feedbacks")</li>
-                            <li class="item">@Html.ActionLink("List of feedbacks", "Index", "feedbacks")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                            Feedbacks
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Create feedback", "Create", "feedbacks")</li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="0">
+                                    List of feedbacks
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li tabindex="-1">@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
+                                    <li tabindex="-1">@Html.ActionLink("Feedbacks on my projects", "IndexOnMy", "feedbacks")</li>
+                                    <li tabindex="-1">@Html.ActionLink("All feedbacks", "Index", "feedbacks")</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>   
-                    <li>
-                        <a href="#">Project managment</a>
-                        <ul class="sub-menu">
-                            <li class="item">@Html.ActionLink("Add project", "Create", "questions")</li>
-                            <li class="item">@Html.ActionLink("Edit/ Remove project", "Index", "questions")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                        Project managment
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Add project", "Create", "Projects")</li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="0">
+                                    List of projects
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("My projects", "IndexMy", "Projects")</li>
+                                    <li>@Html.ActionLink("All projects", "Index", "Projects")</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>}
+                </div>
                 @Html.Partial("_LoginPartial")
-            </div>
+            
         </div>
     </div>
     <div class="container body-content">

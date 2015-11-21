@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using BPPS.Models;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
+using PagedList;
 using System.Web.UI.WebControls;
 using System.IO;
 using Rotativa;
@@ -16,31 +17,53 @@ using System.Web.UI;
 
 namespace BPPS.Controllers
 {
+    [Authorize(Roles = "admin, siemens")]
     public class feedbacksController : Controller
     {
         private Entities db = new Entities();
 
         // GET: feedbacks
-        public ActionResult Index(string project_name)
+        public ActionResult Index(string project_name, int? page)
         {
             var feedbacks = from m in db.feedbacks select m;
             var projects = from m in db.Projects.ToList()
                            select m;
 
             int[] ids = new int[] { };
-            string sessionId = User.Identity.GetUserId();
-            List<int> user_projects;
-            user_projects = db.Users_projects.Where(up => up.Id == sessionId && up.project_role != "partner").Select(up => up.project_id).ToList();
-            ViewBag.myFeedbacks = db.feedbacks.Where(f => user_projects.Any(p => p == f.project_id)).ToList();
 
             if (!String.IsNullOrEmpty(project_name))
             {
                 feedbacks = feedbacks.Where(s => projects.Any(p => p.name.ToUpper().Contains(project_name.ToUpper())));
             }
 
-            return View(db.feedbacks.ToList());
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+
+            return View(db.feedbacks.OrderByDescending(f => f.received).ToPagedList(pageNumber, pageSize));
         }
 
+        public ActionResult IndexOnMy(int? page)
+        {
+            List<int> user_projects;
+            string sessionId = User.Identity.GetUserId();
+
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+
+            user_projects = db.Users_projects.Where(up => up.Id == sessionId && up.project_role != "partner").Select(up => up.project_id).ToList();
+            return View(db.feedbacks.Where(f => user_projects.Any(p => p == f.project_id)).OrderByDescending(p => p.feedback_id).ToPagedList(pageNumber, pageSize));
+        }
+
+        public ActionResult IndexMy(int? page)
+        {
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            string sessionId = User.Identity.GetUserId();
+
+            return View(db.feedbacks.Where(f => f.Id == sessionId).OrderByDescending(p => p.feedback_id).ToPagedList(pageNumber, pageSize));
+        }
+
+        [AllowAnonymous]
         // GET: feedbacks/Details/5
         public ActionResult Details(int? id)
         {
@@ -60,11 +83,40 @@ namespace BPPS.Controllers
             return View(feedbacks);
         }
 
-        // GET: feedbacks/Create
-        public ActionResult Create()
+        public ActionResult SendFeedbackEmail(int? id)
         {
-            ViewBag.project_id = new SelectList(db.Projects, "project_id", "name");
-            ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "LastName");
+            feedbacks feedback = db.feedbacks.Find(id);
+            feedback.initiated = DateTime.Now;
+            db.Entry(feedback).State = EntityState.Modified;
+            db.SaveChanges();
+            
+            TempData["initiated_feedback"] = "Email was send to partner.";
+            return RedirectToAction("IndexOnMy", "feedbacks");
+        }
+
+
+        // GET: feedbacks/Create
+        public ActionResult Create(int? project_id)
+        {
+            Users_projects user_id;
+            List<feedback_questions> feedback;
+
+            if(project_id != null)
+            {
+                ViewBag.project_id = new SelectList(db.Projects.Where(p => p.project_id == project_id), "project_id", "name");
+                ViewBag.Id = new SelectList(db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => new { up.AspNetUsers.LastName, up.AspNetUsers.Id }), "Id", "LastName");
+                user_id = db.Users_projects.Single(p => p.project_id == project_id && p.project_role == "partner");
+                feedback = db.feedback_questions.Where(fq => fq.feedbacks.Projects.project_id == project_id && fq.feedbacks.Id == user_id.Id).ToList();
+                if (db.feedbacks.Where(f => f.project_id == project_id && f.Id == user_id.Id).ToList().Count() >= 1)
+                {
+                    return RedirectToAction("Details", "feedbacks", new { id = feedback[0].feedback_id });
+                }
+            }
+            else
+            {
+                ViewBag.project_id = new SelectList(db.Projects, "project_id", "name");
+                ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "LastName");
+            }
             return View();
         }
 
@@ -75,13 +127,28 @@ namespace BPPS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "project_id,Id")] feedbacks feedbacks)
         {
+
             if (ModelState.IsValid)
             {
-                feedbacks.initiated = DateTime.Now;
+                feedbacks.initiated = null;
                 feedbacks.received = null;
                 db.feedbacks.Add(feedbacks);
                 db.SaveChanges();
-                return RedirectToAction("Create", "feedback_questions", new { feedback_id = feedbacks.feedback_id });
+
+                foreach (var question in db.questions.ToList())
+                {
+                    feedback_questions feedback_question = new feedback_questions();
+                    feedback_question.feedback_id = feedbacks.feedback_id;
+                    feedback_question.question_id = question.question_id;
+
+                    db.feedback_questions.Add(feedback_question);
+                    db.SaveChanges();
+                }
+
+                TempData["successCreatedFeedback"] = "Úspešne ste vytvorili feedback";
+                return RedirectToAction("IndexMy", "feedbacks");
+
+                //return RedirectToAction("Create", "feedback_questions", new { feedback_id = feedbacks.feedback_id });
             }
             return View(feedbacks);
         }
@@ -150,9 +217,7 @@ namespace BPPS.Controllers
             comment = db.feedback_questions.Single(fq => fq.feedback_id == feedback_id);
             return PartialView("_CommentDetail", comment);
         }
-
-
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)

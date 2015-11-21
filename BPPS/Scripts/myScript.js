@@ -12,4 +12,6 @@
         }
     });
 
+    $('[data-submenu]').submenupicker();
+
 });

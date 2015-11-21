@@ -11,6 +11,7 @@ using BPPS.Models;
 namespace BPPS.Controllers
 {
     [Authorize]
+    //[Authorize(Roles = "admin")]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

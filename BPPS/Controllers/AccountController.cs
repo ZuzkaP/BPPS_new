@@ -15,6 +15,7 @@ using System.Web.Security;
 namespace BPPS.Controllers
 {
     [Authorize]
+    //[Authorize(Roles = "admin")]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;

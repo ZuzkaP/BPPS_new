@@ -78,12 +78,9 @@
         <tr>
             <td> @answer.questions.question </td>
             <td class="answerResult"> &nbsp;&nbsp;&nbsp;@answer.result</td>
-            <td>
-                @if (answer.comment == "")
-                { <i> no comment</i> }
-                else
-                { <i> @Html.ActionLink("comment", "CommentDetail", new { feedback_id = answer.feedback_id }) </i> }
-            </td>
+            <td> @if (answer.comment == "")
+            { <i> no comment</i> }
+                else { <i> @Html.ActionLink("comment", "CommentDetail", new { feedback_id = answer.feedback_id}) </i> } </td>
         </tr>
     }
 </table>

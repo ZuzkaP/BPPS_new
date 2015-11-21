@@ -10,7 +10,10 @@ namespace BPPS
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/myScript.js"));
+                        "~/Scripts/myScript.js",
+                        "~/Scripts/bootstrap-submenu.js",
+                        "~/Scripts/bootstrap-submenu.min.js"
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));

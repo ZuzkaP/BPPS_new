@@ -2,6 +2,13 @@
 
 <!DOCTYPE html>
 
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="page-header"><h2> Administration</h2></div>
+
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,13 +21,10 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.name)
+                Name</th>
+            <th>Town
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.locations.town)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.departments2.name)
+            <th>Name
             </th>
             <th></th>
         </tr>

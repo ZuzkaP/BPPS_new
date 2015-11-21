@@ -1,181 +1,116 @@
-﻿@model IEnumerable<BPPS.Models.Projects>
+﻿@model PagedList.IPagedList<BPPS.Models.Projects>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 
 @{
     ViewBag.Title = "Index";
 }
-    
-@using (Html.BeginForm())
-{
-<p>
-    <table style="width:100%;">
-        <tr> 
-            <td ><h2>Search projects</h2></td>
-        </tr>
-        <tr>
-            <td>Location:</td>
-            <td>@Html.DropDownList("location", "All") </td>
-            <td>Segment:</td>
-            <td>@Html.DropDownList("segment", "All")</td>
-        </tr>
-        <tr>
-            <td>Sub Segment:</td>
-            <td>@Html.DropDownList("subSegment", "All")</td>
-            <td>BPSS Status:</td>
-            <td>@Html.DropDownList("bpssStatus", "All")</td>
-        </tr>
-        <tr>
-            <td>Project Status:</td>
-            <td>@Html.DropDownList("status", "All")</td>
-            <td><input type="submit" value="Search" /></td>
-        </tr>
-    </table>
-</p>
-}
-    
-<h2>List of projects</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="page-header"> <h1> All projects</h1> </div>
+<button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#filterForm">Filter</button>
+<div id="filterForm" class="collapse">
+    @using (Html.BeginForm())
+    {
+        <p>
+            <table style="width:100%;">
+                <tr>
+                    <td colspan="4"><h2 style="margin-left: 100px;">Search projects</h2></td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td>@Html.DropDownList("location", "All") </td>
+                    <td>Segment:</td>
+                    <td>@Html.DropDownList("segment", "All")</td>
+                </tr>
+                <tr>
+                    <td>Sub Segment:</td>
+                    <td>@Html.DropDownList("subSegment", "All")</td>
+                    <td>BPSS Status:</td>
+                    <td>@Html.DropDownList("bpssStatus", "All")</td>
+                </tr>
+                <tr>
+                    <td>Project Status:</td>
+                    <td>@Html.DropDownList("status", "All")</td>
+                    <td><input type="submit" value="Search" /></td>
+                </tr>
+            </table>
+        </p>
+    }
+</div>
+<br>
+   <h2 style="margin-left: 100px;">List of projects <sup><span class="badge"> @ViewBag.Count </span></sup></h2>
 
-<h3> My projects </h3>
-<table class="table">
+     <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <h3> All projects </h3>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Serial Number")
+            </th>
+            <th>
+                @Html.DisplayName("Project Id")
+            </th>
+            <th>
+                @Html.DisplayName("Project Name")
+            </th>
+            <th>
+                @Html.DisplayName("Segment")
+            </th>
+            <th>
+                @Html.DisplayName("Sub-Segment")
+            </th>
+            <th>
+                @Html.DisplayName("Location")
+            </th>
+            <th>
+                @Html.DisplayName("BPSS Status")
+            </th>
+            <th>
+                @Html.DisplayName("Project Status")
+            </th>
+            <th></th>
+        </tr>
+        @{ int rowNumberAllProjects = -4;}
+        @foreach (var item in Model)
+        {
     <tr>
-        <th>
-            @Html.DisplayName("Serial Number")
-        </th>
-        <th>
-            @Html.DisplayName("Project Id")
-        </th>
-        <th>
-            @Html.DisplayName("Project Name")
-        </th>
-        <th>
-            @Html.DisplayName("Segment")
-        </th>
-        <th>
-            @Html.DisplayName("Sub-Segment")
-        </th>
-        <th>
-            @Html.DisplayName("Location")
-        </th>
-        <th>
-            @Html.DisplayName("BPSS Status")
-        </th>
-        <th>
-            @Html.DisplayName("Project Status")
-        </th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-
-    @{ int rowNumberMyProjects = 0;}
-    @foreach (var project in ViewBag.myProject)
-    {
-        <tr>
+        <asp:FormView AllowPaging="true">
             <td>
-                @(rowNumberMyProjects += 1)
+                @((Model.PageSize*Model.PageNumber) + (rowNumberAllProjects++))
             </td>
             <td>
-                @project.project_id
+                @Html.DisplayFor(modelItem => item.project_id)
             </td>
             <td>
-                @project.name
+                @Html.DisplayFor(modelItem => item.name)
             </td>
             <td>
-                @project.departments.name
+                @Html.DisplayFor(modelItem => item.departments.name)
             </td>
             <td>
-                @project.departments.name
+                @Html.DisplayFor(modelItem => item.departments.departments2.name)
             </td>
             <td>
-                @project.departments.locations.country
+                @Html.DisplayFor(modelItem => item.departments.locations.country)
             </td>
             <td>
-                @("Initialized")
+                @("Recieved")
             </td>
             <td>
-                @project.status
+                @Html.DisplayFor(modelItem => item.status)
             </td>
             <td>
-                @Html.ActionLink("Initialize", "Index", "feedbacks")
+                @Html.ActionLink("View", "Details", new { id = item.project_id })
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = project.project_id })
-            </td>
-            <td>
-                @Html.ActionLink("View", "Details", new { id = project.project_id }) 
-            </td>
-        </tr>
-    }
-</table>
-
-<h3> All projects </h3>
-<table class="table">
-   <tr>
-        <th>
-            @Html.DisplayName("Serial Number")
-        </th>
-        <th>
-            @Html.DisplayName("Project Id")
-        </th>
-        <th>
-            @Html.DisplayName("Project Name")
-        </th>
-        <th>
-            @Html.DisplayName("Segment")
-        </th>
-        <th>
-            @Html.DisplayName("Sub-Segment")
-        </th>
-        <th>
-            @Html.DisplayName("Location")
-        </th>
-        <th>
-            @Html.DisplayName("BPSS Status")
-        </th>
-        <th>
-            @Html.DisplayName("Project Status")
-        </th>
-       <th></th>
-    </tr>
-
-    @{ int rowNumberAllProjects = 0;}
-   @foreach (var item in Model)
-    {
-        <tr>
-            <asp:FormView AllowPaging="true">
-                <td>
-                    @(rowNumberAllProjects +=1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.project_id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.departments.name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.departments.departments2.name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.departments.locations.country)
-                </td>
-                <td>
-                    @("Recieved")
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.status)
-                </td>
-                <td>
-                    @Html.ActionLink("View", "Details", new { id = item.project_id })
-                </td>
-
-            </asp:FormView>
+        </asp:FormView>
     </tr>
     }
+    </table>
 
-</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page }))
