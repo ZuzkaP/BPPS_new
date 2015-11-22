@@ -3,7 +3,13 @@
     ViewBag.Title = "Manage";
 }
 <h2>@ViewBag.Title.</h2>
-<p class="text-success">@ViewBag.StatusMessage</p>
+
+@if (TempData["succMess"] != null)
+{
+    <div class="alert alert-success">
+        <b>Success! </b>@TempData["succMess"]
+    </div>
+}
 <div>
     <h4>Change your account settings</h4>
     <hr />
@@ -22,10 +28,10 @@
             ]
         </dd>
         @*<dt>External Logins:</dt>
-        <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
-        </dd>*@
+            <dd>
+                @Model.Logins.Count [
+                @Html.ActionLink("Manage", "ManageLogins") ]
+            </dd>*@
         @*
             Phone Numbers can used as a second factor of verification in a two-factor authentication system.
 
@@ -76,17 +82,25 @@
                         }
                     }
             </dd>*@
+        <br>
         <dt>Contact admin:</dt>
         <dd>
+            @using (Html.BeginForm())
+            {
+                @Html.TextArea("requirements", new { @class = "form-control" })
+                <br>
+                <input class="btn btn-primary" type="submit" value="Send" />
+
+            }
+        </dd>
+      <!--  <dd>
             @Html.AntiForgeryToken()
             Input text and clic on button to contact admin with your requirements.
             <textarea id="requirements"></textarea>
             <input type="submit" value="Send" class="btn btn-default" />
-        </dd>
+        </dd>-->
     </dl>
-
 </div>
-
 @if (User.IsInRole("admin"))
             {
     <div class="RoleLink1">

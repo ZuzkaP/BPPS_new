@@ -80,7 +80,7 @@
             <td class="answerResult"> &nbsp;&nbsp;&nbsp;@answer.result</td>
             <td> @if (answer.comment == "")
             { <i> no comment</i> }
-                else { <i> @Html.ActionLink("comment", "CommentDetail", new { feedback_id = answer.feedback_id}) </i> } </td>
+                else { <i> @answer.comment </i> } </td>
         </tr>
     }
 </table>

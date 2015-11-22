@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BPPS.Models;
+using Postal;
+using System.Collections.Generic;
 
 namespace BPPS.Controllers
 {
@@ -16,6 +18,7 @@ namespace BPPS.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private Entities db = new Entities();
 
         public ManageController()
         {
@@ -53,7 +56,7 @@ namespace BPPS.Controllers
 
         //
         // GET: /Manage/Index
-        public async Task<ActionResult> Index(ManageMessageId? message)
+        public async Task<ActionResult> Index(ManageMessageId? message, string requirements)
         {
             ViewBag.StatusMessage =
                 message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
@@ -73,6 +76,19 @@ namespace BPPS.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+            if (requirements != null)
+            {
+                string session_user = User.Identity.GetUserId();
+                AspNetUsers anu;
+                TempData["succMess"] = "Vaša prosba možno bude vyslyšanááá, email bol poslaný adminovi";
+
+                dynamic email = new Email("View");
+                email.to = "mikulasluckanic@gmail.com";
+                email.message = requirements;
+                anu = db.AspNetUsers.Single(a => a.Id == session_user);
+                email.ID = anu.Email;
+                email.Send();
+            }
             return View(model);
         }
 
