@@ -10,13 +10,13 @@
 
 <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#filterForm">Filter</button>
 <br>
-<div id="filterForm" class="collapse">
+<div id="filterForm" class="collapse in">
     @using (Html.BeginForm())
     {
             <table width="500">
                 <tr>
                     <td>Partner name: </td>
-                    <td>@Html.DropDownList("buisness_partner", null, new { @class = "form-control" })</td>
+                    <td>@Html.DropDownList("buisness_partner", null, "All", new { @class = "form-control" })</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -30,6 +30,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
+                
                 <tr>
                     <td><input class="btn btn-primary btn-block" type="submit" value="Search" /></td>
                 </tr>

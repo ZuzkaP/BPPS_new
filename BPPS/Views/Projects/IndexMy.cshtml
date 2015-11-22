@@ -14,20 +14,26 @@
                 </tr>
                 <tr>
                     <td>Location:</td>
-                    <td>@Html.DropDownList("location", "All") </td>
+                    <td>@Html.DropDownList("location", null, "All", new { @class = "form-control" }) </td>
                     <td>Segment:</td>
-                    <td>@Html.DropDownList("segment", "All")</td>
+                    <td>@Html.DropDownList("segment", null, "All", new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>Sub Segment:</td>
-                    <td>@Html.DropDownList("subSegment", "All")</td>
+                    <td>@Html.DropDownList("subSegment",null, "All", new { @class = "form-control" })</td>
                     <td>BPSS Status:</td>
-                    <td>@Html.DropDownList("bpssStatus", "All")</td>
+                    <td>@Html.DropDownList("bpssStatus",null, "All", new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>Project Status:</td>
-                    <td>@Html.DropDownList("status", "All")</td>
-                    <td><input type="submit" value="Search" /></td>
+                    <td>@Html.DropDownList("status", null, "All", new { @class = "form-control" })</td>
+                    <td colspan="2"><input class="btn btn-block btn-primary" type="submit" value="Search" /></td>
                 </tr>
             </table>
         </p>
