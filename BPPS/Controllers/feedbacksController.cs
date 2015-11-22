@@ -107,11 +107,11 @@ namespace BPPS.Controllers
                 ViewBag.Id = new SelectList(db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => new { up.AspNetUsers.LastName, up.AspNetUsers.Id }), "Id", "LastName");
                 user_id = db.Users_projects.Single(p => p.project_id == project_id && p.project_role == "partner");
                 feedback = db.feedback_questions.Where(fq => fq.feedbacks.Projects.project_id == project_id && fq.feedbacks.Id == user_id.Id).ToList();
-                if (feedback[0].feedbacks.initiated != null)
+                /*if (feedback[0].feedbacks.initiated != null)
                 {
                     ViewBag["infoF"] = "Feedback is already initiated and sent to partner!";
                     return View();
-                }
+                }*/
                 if (db.feedbacks.Where(f => f.project_id == project_id && f.Id == user_id.Id).ToList().Count() >= 1)
                 {
                     return RedirectToAction("Edit", "feedback_questions", new { id = feedback[0].feedback_id });

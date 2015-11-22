@@ -175,6 +175,7 @@ namespace BPPS.Controllers
             user_projects = db.Users_projects.Where(up => up.project_role != "partner").Select(up => up.project_id).ToList();
             ViewBag.feedback_initiated = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.initiated).ToList();
             ViewBag.feedback_received = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.received).ToList();
+            ViewBag.feedback_id = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.feedback_id).ToList();
             return View(db.Projects.Include(f => f.feedbacks).Where(f => user_projects.Any(p => p == f.project_id)).ToList());
         }
 

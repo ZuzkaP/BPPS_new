@@ -92,28 +92,42 @@
                     @Html.DisplayFor(modelItem => item.departments.locations.country)
                 </td>
                 <td>
-                    @if (ViewBag.feedback_initiated[rowNumberAllProjects-1 ] != null && ViewBag.feedback_received[rowNumberAllProjects - 1] == null)
+                    @if (ViewBag.feedback_initiated.Count==0)
+                    {
+                        @("Not created")
+                    }
+                    else
+                    {
+                    if (ViewBag.feedback_initiated[rowNumberAllProjects - 1] != null && ViewBag.feedback_received[rowNumberAllProjects - 1] == null)
                     {
                         @("Initialized")
                     }
-                    @if (ViewBag.feedback_received[rowNumberAllProjects - 1] != null)
+                    if (ViewBag.feedback_received[rowNumberAllProjects - 1] != null)
                     {
                         @("Received")
                     }
-                    @if (ViewBag.feedback_initiated[rowNumberAllProjects - 1] == null)
+                    if (ViewBag.feedback_initiated[rowNumberAllProjects - 1] == null)
                     {
                         @("Not initiated")
                     }
-                    
+                   }
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.status)
                 </td>
                 <td>
-                    @if (ViewBag.feedback_initiated[rowNumberAllProjects-1] == null)
+                    @if (ViewBag.feedback_initiated.Count == 0)
                     {
-                        @Html.ActionLink("Create/edit feedback", "Create", "feedbacks", new { project_id = item.project_id }, null)
+                        @Html.ActionLink("Create feedback", "Create", "feedbacks", new { project_id = item.project_id }, null)
                     }
+                    else
+                    {
+                        if (ViewBag.feedback_id[rowNumberAllProjects - 1] == null)
+                        {
+                            @Html.ActionLink("Create feedback", "Create", "feedbacks", new { project_id = item.project_id }, null)
+                        }
+                    }
+
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.project_id })

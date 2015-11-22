@@ -1,0 +1,1 @@
+﻿DELETE FROM feedbacks WHERE feedback_id=67;
