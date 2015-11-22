@@ -1064,3 +1064,8 @@ C:\Users\PC\Desktop\BPPS_new\BPPS\bin\Microsoft.Owin.Security.MicrosoftAccount.x
 C:\Users\PC\Desktop\BPPS_new\BPPS\obj\Debug\BPPS.csprojResolveAssemblyReference.cache
 C:\Users\PC\Desktop\BPPS_new\BPPS\obj\Debug\BPPS.dll
 C:\Users\PC\Desktop\BPPS_new\BPPS\obj\Debug\BPPS.pdb
+C:\Users\PC\Desktop\BPPS_new\BPPS\bin\Postal.dll
+C:\Users\PC\Desktop\BPPS_new\BPPS\bin\RazorEngine.dll
+C:\Users\PC\Desktop\BPPS_new\BPPS\bin\Postal.xml
+C:\Users\PC\Desktop\BPPS_new\BPPS\bin\RazorEngine.pdb
+C:\Users\PC\Desktop\BPPS_new\BPPS\bin\RazorEngine.xml

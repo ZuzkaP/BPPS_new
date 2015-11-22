@@ -14,6 +14,7 @@ using System.Web.UI.WebControls;
 using System.IO;
 using Rotativa;
 using System.Web.UI;
+using Postal;
 
 namespace BPPS.Controllers
 {
@@ -23,21 +24,34 @@ namespace BPPS.Controllers
         private Entities db = new Entities();
 
         // GET: feedbacks
-        public ActionResult Index(string project_name, int? page)
+        public ActionResult Index(string project_name, string buisness_partner, int? page)
         {
-            var feedbacks = from m in db.feedbacks select m;
+            /*var feedbacks = from m in db.feedbacks select m;
             var projects = from m in db.Projects.ToList()
                            select m;
 
             int[] ids = new int[] { };
-
-            if (!String.IsNullOrEmpty(project_name))
-            {
-                feedbacks = feedbacks.Where(s => projects.Any(p => p.name.ToUpper().Contains(project_name.ToUpper())));
-            }
-
+            */
             int pageSize = 5;
             int pageNumber = (page ?? 1);
+
+
+            ViewBag.buisness_partner = new SelectList(db.Users_projects.Where(up => up.project_role == "partner").Select(up => up.AspNetUsers.FirstName).Distinct().ToList());
+
+            List<feedbacks> feedback = db.feedbacks.ToList();
+            if (!String.IsNullOrEmpty(project_name))
+            {
+                feedback = feedback.Where(f => f.Projects.name.ToUpper().Contains(project_name.ToUpper())).ToList();
+            }
+
+            if (!String.IsNullOrEmpty(buisness_partner))
+            {
+                feedback = feedback.Where(fe => fe.AspNetUsers.FirstName.ToUpper() == buisness_partner.ToUpper()).ToList();
+            }
+            if (!String.IsNullOrEmpty(buisness_partner) || !String.IsNullOrEmpty(project_name))
+            {
+                return View(feedback.ToPagedList(pageNumber, pageSize));
+            }
 
             return View(db.feedbacks.OrderByDescending(f => f.received).ToPagedList(pageNumber, pageSize));
         }
@@ -89,7 +103,11 @@ namespace BPPS.Controllers
             feedback.initiated = DateTime.Now;
             db.Entry(feedback).State = EntityState.Modified;
             db.SaveChanges();
-            
+
+            dynamic email = new Email("EmailExample");
+            email.to = feedback.AspNetUsers.Email;
+            email.Send();
+
             TempData["initiated_feedback"] = "Email was sent to partner.";
             return RedirectToAction("IndexOnMy", "feedbacks");
         }

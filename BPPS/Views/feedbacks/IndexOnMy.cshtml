@@ -70,12 +70,14 @@
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.feedback_id})
             </td>
+                @if (item.received == null) {
             <td>
-                <a href="@Url.Action("PrintPDF","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
+                <a href="@Url.Action("PrintPDF", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
             </td>
             <td>
-                <a href="@Url.Action("ExportData","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
+                <a href="@Url.Action("ExportData", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
             </td>
+            }
         </tr>
     }
 
