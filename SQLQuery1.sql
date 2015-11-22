@@ -1,1 +1,1 @@
-﻿DELETE FROM feedbacks WHERE feedback_id=67;
+﻿DELETE FROM f eedbacks WHERE feedback_id=67;
