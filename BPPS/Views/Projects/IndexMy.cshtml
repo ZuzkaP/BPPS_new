@@ -67,6 +67,8 @@
         <th></th>
     </tr>
     @{ int rowNumberAllProjects = 0;}
+    @{ int rowNumberF = 0;}
+
     @foreach (var item in Model)
     {
         <tr>
@@ -90,13 +92,28 @@
                     @Html.DisplayFor(modelItem => item.departments.locations.country)
                 </td>
                 <td>
-                    @("Initialized")
+                    @if (ViewBag.feedback_initiated[rowNumberAllProjects-1 ] != null && ViewBag.feedback_received[rowNumberAllProjects - 1] == null)
+                    {
+                        @("Initialized")
+                    }
+                    @if (ViewBag.feedback_received[rowNumberAllProjects - 1] != null)
+                    {
+                        @("Received")
+                    }
+                    @if (ViewBag.feedback_initiated[rowNumberAllProjects - 1] == null)
+                    {
+                        @("Not initiated")
+                    }
+                    
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.status)
                 </td>
                 <td>
-                     @Html.ActionLink("Create/edit feedback", "Create", "feedbacks", new { project_id = item.project_id }, null)
+                    @if (ViewBag.feedback_initiated[rowNumberAllProjects-1] == null)
+                    {
+                        @Html.ActionLink("Create/edit feedback", "Create", "feedbacks", new { project_id = item.project_id }, null)
+                    }
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.project_id })
