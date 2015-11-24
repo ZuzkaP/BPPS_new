@@ -80,7 +80,7 @@ namespace BPPS.Controllers
             {
                 string session_user = User.Identity.GetUserId();
                 AspNetUsers anu;
-                TempData["succMess"] = "Vaša prosba možno bude vyslyšanááá, email bol poslaný adminovi";
+                TempData["succMess"] = "Your message was sent to administrator!";
 
                 dynamic email = new Email("View");
                 email.to = "mikulasluckanic@gmail.com";

@@ -18,11 +18,12 @@ using Postal;
 
 namespace BPPS.Controllers
 {
-    [Authorize(Roles = "admin, siemens")]
+    [Authorize(Roles = "admin, siemens, partner")]
     public class feedbacksController : Controller
     {
         private Entities db = new Entities();
 
+        [Authorize(Roles = "admin, siemens")]
         // GET: feedbacks
         public ActionResult Index(string project_name, string buisness_partner, int? page)
         {
@@ -56,6 +57,7 @@ namespace BPPS.Controllers
             return View(db.feedbacks.OrderByDescending(f => f.received).ToPagedList(pageNumber, pageSize));
         }
 
+        [Authorize(Roles = "admin, siemens")]
         public ActionResult IndexOnMy(int? page)
         {
             List<int> user_projects;
@@ -68,6 +70,7 @@ namespace BPPS.Controllers
             return View(db.feedbacks.Where(f => user_projects.Any(p => p == f.project_id)).OrderByDescending(p => p.feedback_id).ToPagedList(pageNumber, pageSize));
         }
 
+        [Authorize(Roles = "admin, siemens, partner")]
         public ActionResult IndexMy(int? page)
         {
             int pageSize = 5;
@@ -97,6 +100,7 @@ namespace BPPS.Controllers
             return View(feedbacks);
         }
 
+        [Authorize(Roles = "admin, siemens")]
         public ActionResult SendFeedbackEmail(int? id)
         {
             feedbacks feedback = db.feedbacks.Find(id);
@@ -112,7 +116,7 @@ namespace BPPS.Controllers
             return RedirectToAction("IndexOnMy", "feedbacks");
         }
 
-
+        [Authorize(Roles = "admin, siemens")]
         // GET: feedbacks/Create
         public ActionResult Create(int? project_id)
         {
@@ -146,6 +150,7 @@ namespace BPPS.Controllers
         // POST: feedbacks/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "admin, siemens")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "project_id,Id")] feedbacks feedbacks)
@@ -168,14 +173,15 @@ namespace BPPS.Controllers
                     db.SaveChanges();
                 }
 
-                TempData["successCreatedFeedback"] = "Úspešne ste vytvorili feedback";
-                return RedirectToAction("IndexMy", "feedbacks");
+                TempData["successCreatedFeedback"] = "Feedback successfuly created.";
+                return RedirectToAction("IndexOnMy", "feedbacks");
 
                 //return RedirectToAction("Create", "feedback_questions", new { feedback_id = feedbacks.feedback_id });
             }
             return View(feedbacks);
         }
 
+        [Authorize(Roles = "admin, siemens")]
         // GET: feedbacks/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -194,6 +200,7 @@ namespace BPPS.Controllers
         // POST: feedbacks/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "admin, siemens")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "feedback_id,initiated,received,project_id,Id")] feedbacks feedbacks)
@@ -207,6 +214,7 @@ namespace BPPS.Controllers
             return View(feedbacks);
         }
 
+        [Authorize(Roles = "admin, siemens")]
         // GET: feedbacks/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -222,7 +230,7 @@ namespace BPPS.Controllers
             return View(feedbacks);
         }
 
-
+        [Authorize(Roles = "admin, siemens")]
         // POST: feedbacks/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -234,13 +242,15 @@ namespace BPPS.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "admin, siemens")]
         public ActionResult CommentDetail(int feedback_id)
         {
             feedback_questions comment;
             comment = db.feedback_questions.Single(fq => fq.feedback_id == feedback_id);
             return PartialView("_CommentDetail", comment);
         }
-        
+
+        [Authorize(Roles = "admin, siemens")]
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -250,6 +260,7 @@ namespace BPPS.Controllers
             base.Dispose(disposing);
         }
 
+        [Authorize(Roles = "admin, siemens")]
         public ActionResult ExportData(int? id)
         {
             var datasource = db.feedback_questions.Where(f => f.feedback_id == id).Select(f => new { f.questions.question, f.result, f.comment }).ToList();
@@ -272,6 +283,7 @@ namespace BPPS.Controllers
             return Json("Success");
         }
 
+        [Authorize(Roles = "admin, siemens")]
         public ActionResult PrintPDF(int? id)
         {
             return new ActionAsPdf("Details", new { id = id })

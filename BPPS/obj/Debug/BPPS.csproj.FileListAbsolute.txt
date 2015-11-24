@@ -1069,3 +1069,8 @@ C:\Users\PC\Desktop\BPPS_new\BPPS\bin\RazorEngine.dll
 C:\Users\PC\Desktop\BPPS_new\BPPS\bin\Postal.xml
 C:\Users\PC\Desktop\BPPS_new\BPPS\bin\RazorEngine.pdb
 C:\Users\PC\Desktop\BPPS_new\BPPS\bin\RazorEngine.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Postal.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\RazorEngine.dll
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\Postal.xml
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\RazorEngine.pdb
+C:\Users\Mayki\Desktop\BPPS_new\BPPS\bin\RazorEngine.xml

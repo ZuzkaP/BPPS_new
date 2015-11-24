@@ -119,7 +119,7 @@ namespace BPPS.Controllers
             feedback.received = DateTime.Now;
             db.Entry(feedback).State = EntityState.Modified;
             db.SaveChanges();
-            TempData["message"] = "You have successfully submitted feedback";
+            TempData["message"] = "You have successfully submitted feedback!";
             return RedirectToAction("Index", "Home");
         }
 
