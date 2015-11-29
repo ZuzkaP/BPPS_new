@@ -14,4 +14,34 @@
 
     $('[data-submenu]').submenupicker();
 
+    $('.rq').click(function () {
+ 
+        $('.rq').parent().css({ "color": "black" });
+
+        if ($(this).val() == "1") {
+            $(this).parent().css({ "color": "red" });
+        }
+        else if ($(this).val() == "2") {
+            $(this).parent().css({ "color": "orange" });
+        }
+        else {
+            $(this).parent().css({ "color": "green" });
+        }
+
+        $('.rq').parent().css({ "font-weight": "normal" });
+        $(this).parent().css({"font-weight":"bold"});
+    });
+    
+
+    $('.radio-inline > input').change(function () {
+        var val = $(this).val();
+        var comment = $(this).closest('.form-group').find('textarea.form-control');
+        if (val < 3) {
+            comment.attr('required', 'required');
+        }
+        else {
+            comment.removeAttr('required');
+        }
+    });
+    
 });

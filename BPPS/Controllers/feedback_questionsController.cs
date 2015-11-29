@@ -89,6 +89,7 @@ namespace BPPS.Controllers
         public ActionResult FeedbackForm(int feedback_id)
         {
             ViewBag.feedback_id = feedback_id;
+            ViewBag.feedback = db.feedbacks.Find(feedback_id); 
             return View(db.feedback_questions.Include(q => q.questions).Where(f => f.feedback_id == feedback_id).ToList());
         }
 
@@ -119,7 +120,7 @@ namespace BPPS.Controllers
             feedback.received = DateTime.Now;
             db.Entry(feedback).State = EntityState.Modified;
             db.SaveChanges();
-            TempData["message"] = "You have successfully submitted feedback!";
+            TempData["message"] = "You have successfully submitted feedback";
             return RedirectToAction("Index", "Home");
         }
 
