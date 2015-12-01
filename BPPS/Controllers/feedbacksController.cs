@@ -123,7 +123,7 @@ namespace BPPS.Controllers
             Users_projects user_id;
             List<feedback_questions> feedback;
 
-            if(project_id != null)
+            if (project_id != null)
             {
                 ViewBag.project_id = new SelectList(db.Projects.Where(p => p.project_id == project_id), "project_id", "name");
                 ViewBag.Id = new SelectList(db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => new { up.AspNetUsers.LastName, up.AspNetUsers.Id }), "Id", "LastName");
@@ -265,12 +265,38 @@ namespace BPPS.Controllers
         {
             var datasource = db.feedback_questions.Where(f => f.feedback_id == id).Select(f => new { f.questions.question, f.result, f.comment }).ToList();
 
+            string FilePath = Server.MapPath("~/Temp/");
+            string FileName = "test.txt";
+
             GridView gv = new GridView();
             gv.DataSource = datasource;
             gv.DataBind();
             Response.ClearContent();
             Response.Buffer = true;
-            Response.AddHeader("content-disposition", "attachment; filename=Report.xls");
+            Response.AddHeader("content-disposition", "attachment; filename=Report_" + id + ".xls");
+            Response.ContentType = "application/ms-excel";
+            Response.Charset = "";
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter htw = new HtmlTextWriter(sw);
+            gv.RenderControl(htw);
+            Response.Output.Write(sw.ToString());
+            Response.Flush();
+            Response.End();
+
+            return Json("Success");
+        }
+
+        [Authorize(Roles = "admin, siemens")]
+        public ActionResult ExportData2()
+        {
+            var datasource = db.feedback_questions.OrderBy(f => f.feedbacks.Projects.name).ThenBy(f => f.feedbacks.AspNetUsers.Email).Select(f => new { f.feedbacks.Projects.name, f.feedbacks.AspNetUsers.Email, f.questions.question, f.result, f.comment }).ToList();
+
+            GridView gv = new GridView();
+            gv.DataSource = datasource;
+            gv.DataBind();
+            Response.ClearContent();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment; filename=Report_all.xls");
             Response.ContentType = "application/ms-excel";
             Response.Charset = "";
             StringWriter sw = new StringWriter();
@@ -288,7 +314,16 @@ namespace BPPS.Controllers
         {
             return new ActionAsPdf("Details", new { id = id })
             {
-                FileName = "Report.pdf"
+                FileName = "Report_" + id + ".pdf"
+            };
+        }
+
+        [Authorize(Roles = "admin, siemens")]
+        public ActionResult PrintPDF2()
+        {
+            return new ActionAsPdf("../feedback_questions/All")
+            {
+                FileName = "Report_all.pdf"
             };
         }
     }

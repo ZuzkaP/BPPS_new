@@ -41,39 +41,46 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.project_id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Projects.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.initiated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.received)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
-        </td>
-        <td>
-            <a href="@Url.Action("PrintPDF","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
-        </td>
-        <td>
-            <a href="@Url.Action("ExportData","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.project_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Projects.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.initiated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.received)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+            </td>
+            <td>
+                <a href="@Url.Action("PrintPDF","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
+            </td>
+            <td>
+                <a href="@Url.Action("ExportData","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
+            </td>
+        </tr>
+    }
 </table>
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
 @Html.PagedListPager(Model, page => Url.Action("IndexMy",
     new { page }))
+
+<div class="pull-right">
+    Export all:
+    <a href="@Url.Action("PrintPDF2", "feedbacks")"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
+    <a href="@Url.Action("ExportData2", "feedbacks")"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
+</div>

@@ -21,14 +21,14 @@
                     <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <div class="col-md-10 Roles">
                             <label class="radio-inline">@Html.RadioButton("Role", "admin", false) admin</label>
                             <label class="radio-inline">@Html.RadioButton("Role", "siemens", false) siemens</label>
                             <label class="radio-inline">@Html.RadioButton("Role", "partner", false) partner</label>
                             <label class="radio-inline">@Html.RadioButton("Role", "guest", true) guest</label>
                         </div>
-                    </div>
+                    </div>*@
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
