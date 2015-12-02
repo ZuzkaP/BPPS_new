@@ -66,7 +66,7 @@ namespace BPPS.Controllers
             int pageSize = 5;
             int pageNumber = (page ?? 1);
 
-            user_projects = db.Users_projects.Where(up => up.Id == sessionId && up.project_role != "partner").Select(up => up.project_id).ToList();
+          user_projects = db.Users_projects.Where(up => up.Id == sessionId && up.project_role != "partner").Select(up => up.project_id).ToList();
             return View(db.feedbacks.Where(f => user_projects.Any(p => p == f.project_id)).OrderByDescending(p => p.feedback_id).ToPagedList(pageNumber, pageSize));
         }
 
@@ -99,6 +99,27 @@ namespace BPPS.Controllers
             }
             return View(feedbacks);
         }
+
+
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    feedbacks feedbacks = db.feedbacks.Find(id);
+        //    if (feedbacks == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    else
+        //    {
+        //        db.feedbacks.Remove(feedbacks);
+        //        db.SaveChanges();
+        //        TempData["successDeletedFeedback"] = "Feedback  was deleted.";
+        //    }
+        //    return View(feedbacks);
+        //}
 
         [Authorize(Roles = "admin, siemens")]
         public ActionResult SendFeedbackEmail(int? id)
@@ -236,7 +257,9 @@ namespace BPPS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            List<feedback_questions> feedbacks_question = db.feedback_questions.Where(f => f.feedback_id == id).ToList();
             feedbacks feedbacks = db.feedbacks.Find(id);
+            db.feedback_questions.RemoveRange(feedbacks_question);
             db.feedbacks.Remove(feedbacks);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -266,7 +289,7 @@ namespace BPPS.Controllers
             var datasource = db.feedback_questions.Where(f => f.feedback_id == id).Select(f => new { f.questions.question, f.result, f.comment }).ToList();
 
             string FilePath = Server.MapPath("~/Temp/");
-            string FileName = "test.txt";
+            //string FileName = "test.txt";
 
             GridView gv = new GridView();
             gv.DataSource = datasource;

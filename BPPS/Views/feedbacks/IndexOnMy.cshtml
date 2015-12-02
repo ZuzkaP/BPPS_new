@@ -68,11 +68,14 @@
                 {
                     @Html.ActionLink("Initialize", "SendFeedbackEmail", new { id = item.feedback_id })
                 }
+
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
             </td>
-
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.feedback_id })
+            </td>
             <td>
                 <a href="@Url.Action("PrintPDF", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
             </td>
