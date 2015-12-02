@@ -174,5 +174,10 @@ namespace BPPS.Controllers
             }
             base.Dispose(disposing);
         }
+        
+        public ActionResult All()
+        {
+            return View(db.feedback_questions.OrderBy(f => f.feedbacks.Projects.name).ThenBy(f => f.feedbacks.AspNetUsers.Email).ToList());
+        }
     }
 }

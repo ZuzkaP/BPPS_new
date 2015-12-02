@@ -409,6 +409,7 @@
     <Content Include="Views\Emails\Web.config" />
     <Content Include="Views\Emails\EmailExample.cshtml" />
     <Content Include="Views\Emails\View.cshtml" />
+    <Content Include="Views\feedback_questions\All.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

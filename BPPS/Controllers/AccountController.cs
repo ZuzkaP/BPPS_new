@@ -85,21 +85,22 @@ namespace BPPS.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    if (SignInManager.UserManager.IsInRole(spravcaPouzivatelov.FindByEmail(model.Email).Id, role))
-                    {
-                        spravcaRoly.Create(new IdentityRole(role));
-                        ApplicationUser pouzivatel = spravcaPouzivatelov.FindByEmail(model.Email);
-                        spravcaPouzivatelov.AddToRole(pouzivatel.Id, role);
-                        TempData["SuccMsg"] = "You are signed in!";
-                        return RedirectToLocal(returnUrl);
-                    }
-                    else
-                    {
-                        TempData["FailMsg"] = "You have different role! Contact your admin.";
-                        AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-                        return View(model);
-                    }
-
+                    //if (SignInManager.UserManager.IsInRole(spravcaPouzivatelov.FindByEmail(model.Email).Id, role))
+                    //{
+                    //    spravcaRoly.Create(new IdentityRole(role));
+                    //    ApplicationUser pouzivatel = spravcaPouzivatelov.FindByEmail(model.Email);
+                    //    spravcaPouzivatelov.AddToRole(pouzivatel.Id, role);
+                    //    TempData["SuccMsg"] = "You are signed in!";
+                    //    return RedirectToLocal(returnUrl);
+                    //}
+                    //else
+                    //{
+                    //    TempData["FailMsg"] = "You have different role! Contact your admin.";
+                    //    AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+                    //    return View(model);
+                    //}
+                    TempData["SuccMsg"] = "You are signed in!";
+                    return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -109,7 +110,6 @@ namespace BPPS.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
-
         }
 
         //
