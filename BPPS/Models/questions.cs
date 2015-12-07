@@ -22,6 +22,8 @@ namespace BPPS.Models
     
         public int question_id { get; set; }
         public string question { get; set; }
+        public string deprecated { get; set; }
+        public string for_project_role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<feedback_questions> feedback_questions { get; set; }

@@ -43,5 +43,18 @@
             comment.removeAttr('required');
         }
     });
-    
+
+    $('input[name="checked_all"]').change(function () {
+        if ($('input[name = "checked_all"]').is(':checked')) {
+            $('input[name="partners"]').prop('checked', true);
+        }
+        else {
+            $('input[name="partners"]').prop('checked', false);
+        }
+    })
+
+    if ($('.parrr').is(':visible') && (!$('#partners').is(':visible'))) {
+        $('#submitFeedback').slideUp('slow');
+    }
+
 });

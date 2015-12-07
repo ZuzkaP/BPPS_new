@@ -124,6 +124,8 @@
           </Key>
           <Property Name="question_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="question" Type="nvarchar(max)" />
+          <Property Name="deprecated" Type="nvarchar" MaxLength="20" />
+          <Property Name="for_project_role" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Table">
           <Key>
@@ -492,6 +494,8 @@
           <Property Name="question_id" Type="Int32" Nullable="false" />
           <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="feedback_questions" Relationship="Model.FK__feedback___quest__02084FDA" FromRole="questions" ToRole="feedback_questions" />
+          <Property Name="deprecated" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="for_project_role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Table">
           <Key>
@@ -855,6 +859,8 @@
           <EntitySetMapping Name="questions">
             <EntityTypeMapping TypeName="Model.questions">
               <MappingFragment StoreEntitySet="questions">
+                <ScalarProperty Name="for_project_role" ColumnName="for_project_role" />
+                <ScalarProperty Name="deprecated" ColumnName="deprecated" />
                 <ScalarProperty Name="question_id" ColumnName="question_id" />
                 <ScalarProperty Name="question" ColumnName="question" />
               </MappingFragment>

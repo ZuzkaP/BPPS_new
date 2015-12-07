@@ -115,6 +115,8 @@
     <EntitySetMapping Name="questions">
       <EntityTypeMapping TypeName="Model.questions">
         <MappingFragment StoreEntitySet="questions">
+          <ScalarProperty Name="for_project_role" ColumnName="for_project_role" />
+          <ScalarProperty Name="deprecated" ColumnName="deprecated" />
           <ScalarProperty Name="question_id" ColumnName="question_id" />
           <ScalarProperty Name="question" ColumnName="question" />
         </MappingFragment>

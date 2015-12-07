@@ -132,6 +132,8 @@
     <Property Name="question_id" Type="Int32" Nullable="false" />
     <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="feedback_questions" Relationship="Model.FK__feedback___quest__02084FDA" FromRole="questions" ToRole="feedback_questions" />
+    <Property Name="deprecated" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="for_project_role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Table">
     <Key>

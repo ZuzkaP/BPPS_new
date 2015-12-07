@@ -141,24 +141,45 @@ namespace BPPS.Controllers
         // GET: feedbacks/Create
         public ActionResult Create(int? project_id)
         {
-            Users_projects user_id;
-            List<feedback_questions> feedback;
+            List<Users_projects> user_id;
+            List<string> Email;
+            List<feedbacks> fe;
+            int i = 0;
 
             if (project_id != null)
             {
                 ViewBag.project_id = new SelectList(db.Projects.Where(p => p.project_id == project_id), "project_id", "name");
-                ViewBag.Id = new SelectList(db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => new { up.AspNetUsers.LastName, up.AspNetUsers.Id }), "Id", "LastName");
-                user_id = db.Users_projects.Single(p => p.project_id == project_id && p.project_role == "partner");
-                feedback = db.feedback_questions.Where(fq => fq.feedbacks.Projects.project_id == project_id && fq.feedbacks.Id == user_id.Id).ToList();
+                //      ViewBag.Id = new SelectList(db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => new { up.AspNetUsers.FirstName,up.AspNetUsers.LastName, up.AspNetUsers.Id }), "Id", "LastName", "FirstName");
+                Email = db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => up.AspNetUsers.Email).ToList();
+                ViewBag.Email = Email;
+                ViewBag.FirstName = db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => up.AspNetUsers.FirstName).ToList();
+                ViewBag.LastName = db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").Select(up => up.AspNetUsers.LastName).ToList();
+
+                user_id = db.Users_projects.Where(p => p.project_id == project_id && p.project_role == "partner").ToList();
+
+                fe = db.feedbacks.Where(f => f.project_id == project_id).ToList();
+
+                string[] emails = new string[Email.Count];
+
+                foreach (var fee in fe)
+                {
+                    emails[i] = fee.AspNetUsers.Email;
+                    i++;
+                }
+
+                ViewBag.hasFeedback = emails;
+
+
+                //feedback = db.feedback_questions.Where(fq => fq.feedbacks.Projects.project_id == project_id && fq.feedbacks.Id == user_id.Id).ToList();
                 /*if (feedback[0].feedbacks.initiated != null)
                 {
                     ViewBag["infoF"] = "Feedback is already initiated and sent to partner!";
                     return View();
                 }*/
-                if (db.feedbacks.Where(f => f.project_id == project_id && f.Id == user_id.Id).ToList().Count() >= 1)
+              /*  if (db.feedbacks.Where(f => f.project_id == project_id && f.Id == user_id.Id).ToList().Count() >= 1)
                 {
                     return RedirectToAction("Edit", "feedback_questions", new { id = feedback[0].feedback_id });
-                }
+                }*/
             }
             else
             {
@@ -174,32 +195,70 @@ namespace BPPS.Controllers
         [Authorize(Roles = "admin, siemens")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "project_id,Id")] feedbacks feedbacks)
+        public ActionResult Create([Bind(Include = "project_id")] feedbacks feedbacks, List<string> partners)
         {
+
+            int a = partners.Count();
+
+            string[] partnerIDs = new string[a];
+
+            AspNetUsers anu;
+
+            int inc = 0;
+
+             foreach (var partner in partners)
+             {
+                
+            anu = db.AspNetUsers.Single(asn => asn.Email == partner);
+            partnerIDs[inc] = anu.Id;
+                inc++;
+            }
+
+
+            inc = 0;
+            int iterations = 0;
+            int count = partnerIDs.Count();
+            iterations = count / 2;
+            int[] b = new int[a];
 
             if (ModelState.IsValid)
             {
-                feedbacks.initiated = null;
-                feedbacks.received = null;
-                db.feedbacks.Add(feedbacks);
-                db.SaveChanges();
+                foreach (var id in partnerIDs)
+                {
+                    // return RedirectToAction("IndexMy", "feedbacks", new { perkelt = partnerIDs.Count()});
 
-                foreach (var question in db.questions.ToList())
+                    feedbacks.Id = id;
+                    feedbacks.initiated = null;
+                    feedbacks.received = null;
+                    db.feedbacks.Add(feedbacks);
+                    db.SaveChanges();
+                    b[inc] = feedbacks.feedback_id;
+                    inc++;
+
+                }
+
+                inc = 0;
+                
+                foreach (var c in b) { 
+
+                foreach (var question in db.questions.Where(q => q.deprecated == "n" && q.for_project_role == "partner").ToList())
                 {
                     feedback_questions feedback_question = new feedback_questions();
-                    feedback_question.feedback_id = feedbacks.feedback_id;
+                    feedback_question.feedback_id = c;
                     feedback_question.question_id = question.question_id;
 
                     db.feedback_questions.Add(feedback_question);
                     db.SaveChanges();
                 }
-
-                TempData["successCreatedFeedback"] = "Feedback successfuly created.";
-                return RedirectToAction("IndexOnMy", "feedbacks");
-
-                //return RedirectToAction("Create", "feedback_questions", new { feedback_id = feedbacks.feedback_id });
             }
-            return View(feedbacks);
+
+                TempData["successCreatedFeedback"] = "Úspešne ste vytvorili feedback";
+                      return RedirectToAction("IndexOnMy", "feedbacks");
+
+                      //return RedirectToAction("Create", "feedback_questions", new { feedback_id = feedbacks.feedback_id });
+                  }
+                  
+            return RedirectToAction("Index", "locations");
         }
 
         [Authorize(Roles = "admin, siemens")]

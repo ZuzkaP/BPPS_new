@@ -119,6 +119,8 @@
     </Key>
     <Property Name="question_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="question" Type="nvarchar(max)" />
+    <Property Name="deprecated" Type="nvarchar" MaxLength="20" />
+    <Property Name="for_project_role" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Table">
     <Key>
