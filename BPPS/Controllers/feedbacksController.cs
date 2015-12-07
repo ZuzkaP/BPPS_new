@@ -77,7 +77,7 @@ namespace BPPS.Controllers
             int pageNumber = (page ?? 1);
             string sessionId = User.Identity.GetUserId();
 
-            return View(db.feedbacks.Where(f => f.Id == sessionId).OrderByDescending(p => p.feedback_id).ToPagedList(pageNumber, pageSize));
+            return View(db.feedbacks.Where(f => f.Id == sessionId && f.initiated != null).OrderByDescending(p => p.feedback_id).ToPagedList(pageNumber, pageSize));
         }
 
         [AllowAnonymous]

@@ -132,14 +132,15 @@ a.site-logo {
     font-size: 120%;
 }
 .newFeedbackTable th{
-    background-color: darkblue;
+    background-color:black;
     color:white;
     text-align: center;
     font-size:120%;
+    font-weight: normal;
     padding: 15px;
 }
-.newFeedbackTable .thRow{
-    border-radius:inherit;
+.newFeedbackTable tr{
+    background-color:white;
 }
 .itemTableCenter{
     text-align:center;

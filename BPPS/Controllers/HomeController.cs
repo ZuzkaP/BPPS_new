@@ -24,6 +24,7 @@ namespace BPPS.Controllers
             this.newFeedbacks = db.feedbacks
                 .Where(f => f.Id == sessionUserId).
                 Where(f => f.received == null)
+                .Where(f => f.initiated != null)
                 .Include(p => p.Projects).ToList();
             ViewBag.hasNewFeedbacks = this.newFeedbacks.Count >= 1 ? true : false;
             ViewBag.newFeedbacks = this.newFeedbacks;

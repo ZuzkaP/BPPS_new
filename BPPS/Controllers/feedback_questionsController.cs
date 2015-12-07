@@ -73,15 +73,24 @@ namespace BPPS.Controllers
         // GET: feedback_questions/Edit/5
         public ActionResult Edit(int? id)
         {
+            feedbacks feedback;
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            feedback_questions feedback_questions = db.feedback_questions.Find(id);
+            List<feedback_questions> feedback_questions = db.feedback_questions.Where(fq => fq.feedback_id == id).ToList();
             if (feedback_questions == null)
             {
                 return HttpNotFound();
             }
+            feedback = db.feedbacks.Find(id);
+            ViewBag.project_name = feedback.Projects.name;
+            ViewBag.project_abbr = feedback.Projects.acronym;
+            ViewBag.firstName = feedback.AspNetUsers.FirstName;
+            ViewBag.lastName = feedback.AspNetUsers.LastName;
+            ViewBag.email = feedback.AspNetUsers.Email;
+            ViewBag.feedback_id = feedback_questions[0].feedback_id;
             return View(feedback_questions);
 
         }
@@ -129,15 +138,34 @@ namespace BPPS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "question_id,feedback_id,result,comment")] feedback_questions feedback_questions)
+        public ActionResult Edit(int feedback_id, List<int> questions)
         {
-            if (ModelState.IsValid)
+            int x = 1;
+            feedbacks feedback;
+            feedback_questions fqq = new Models.feedback_questions();
+
+            List<feedback_questions> feedback_questions = db.feedback_questions.Where(fq => fq.feedback_id == feedback_id).ToList();
+            if (feedback_questions == null)
             {
-                db.Entry(feedback_questions).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                return HttpNotFound();
             }
-            return View(feedback_questions);
+
+            db.feedback_questions.RemoveRange(db.feedback_questions.Where(fq => fq.feedback_id == feedback_id));
+            db.SaveChanges();
+
+            foreach (var question in questions)
+            {
+                fqq.feedback_id = feedback_id;
+                fqq.question_id = question;
+                fqq.comment = null;
+                fqq.result = null;
+                db.feedback_questions.Add(fqq);
+                
+            }
+            db.SaveChanges();
+
+            return RedirectToAction("IndexOnMy", "feedbacks");
+
         }
 
         // GET: feedback_questions/Delete/5

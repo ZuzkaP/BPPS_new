@@ -71,18 +71,33 @@
 
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+                @if (item.initiated == null)
+                {
+                    @Html.ActionLink("Edit", "Edit", "feedback_questions", new { id = item.feedback_id }, null)
+                }
             </td>
             <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.feedback_id })
+                @if (item.initiated != null && item.received != null)
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+                }
             </td>
             <td>
-                <a href="@Url.Action("PrintPDF", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
+                @if (item.initiated == null && item.received == null)
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.feedback_id })
+                }
             </td>
-            <td>
-                <a href="@Url.Action("ExportData", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
-            </td>
+            @if (item.initiated != null && item.received != null)
+            {
+                <td>
 
+                    <a href="@Url.Action("PrintPDF", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("ExportData", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
+                </td>
+            }
         </tr>
     }
 

@@ -46,27 +46,29 @@
         }
         @if (ViewBag.hasNewFeedbacks)
         {
-            <h3> Máte nové nevyplnené feedbacky: </h3> <br>
-            <table class="newFeedbackTable">
-                <tr class="thRow">
-                    <th> Feedback initiated </th>
-                    <th> Project acronym </th>
-                    <th> Project name </th>
-                    <th> </th>
-                </tr>
-                @foreach (var feedbacks in ViewBag.newFeedbacks)
-                {
-                    <tr>
-                        <td> @feedbacks.initiated </td>
-                        <td> @feedbacks.Projects.acronym </td>
-                        <td> @feedbacks.Projects.name </td>
-                        <td>
-                            @Html.ActionLink("vyplniť", "FeedbackForm", "feedback_questions",
-                            new { feedback_id = feedbacks.feedback_id }, null)
-                        </td>
+            <h4> Máte nové nevyplnené feedbacky: </h4> <br>
+            <div class="table-responsive">
+                <table class="table newFeedbackTable">
+                    <tr class="thRow">
+                        <th> Feedback initiated </th>
+                        <th> Project acronym </th>
+                        <th> Project name </th>
+                        <th> </th>
                     </tr>
-                }
-            </table>
+                    @foreach (var feedbacks in ViewBag.newFeedbacks)
+                {
+                        <tr>
+                            <td> @feedbacks.initiated </td>
+                            <td> @feedbacks.Projects.acronym </td>
+                            <td> @feedbacks.Projects.name </td>
+                            <td>
+                                @Html.ActionLink("v y p l n i ť", "FeedbackForm", "feedback_questions",
+                            new { feedback_id = feedbacks.feedback_id }, new { @class = "btn btn-info" })
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
         }
     </div>
 </div>

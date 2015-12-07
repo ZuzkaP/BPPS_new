@@ -63,7 +63,17 @@
                 @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+                @if (item.received == null)
+                {
+                    @Html.ActionLink("v y p l n i ť", "FeedbackForm", "feedback_questions",
+                           new { feedback_id = item.feedback_id }, new { @class = "btn btn-info" })
+                }
+            </td>
+            <td>
+                @if (item.received != null)
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+                }
             </td>
             <td>
                 <a href="@Url.Action("PrintPDF","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
@@ -74,13 +84,13 @@
         </tr>
     }
 </table>
-Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
-@Html.PagedListPager(Model, page => Url.Action("IndexMy",
+        @Html.PagedListPager(Model, page => Url.Action("IndexMy",
     new { page }))
 
-<div class="pull-right">
-    Export all:
-    <a href="@Url.Action("PrintPDF2", "feedbacks")"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
-    <a href="@Url.Action("ExportData2", "feedbacks")"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
-</div>
+        <div class="pull-right">
+            Export all:
+            <a href="@Url.Action("PrintPDF2", "feedbacks")"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
+            <a href="@Url.Action("ExportData2", "feedbacks")"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
+        </div>

@@ -4,38 +4,40 @@
     ViewBag.Title = "Feedback form";
 }
 
-<h2>FeedbackForm</h2>
+<div class="page-header"> <h1>My feedback for project <abbr title="@ViewBag.feedback.Projects.name"> @ViewBag.feedback.Projects.acronym </abbr></h1></div>
+<div class="alert alert-info"><b> When you give mark less than 3 you must <span style="color:red;">comment</span> answer!</b></div>
+<div class="alert alert-warning"><b><span style="color:red;">*</span> - required item </b></div>
 
+<hr>
 <div class="center_form">
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h4>feedback_questions</h4>
-        @foreach (var item in Model)
-        {
-        <hr />
-        <div class="form-group">
-            @Html.Label(item.questions.question)
-            <div class="col-md-10">
-                <label>@Html.RadioButton(item.question_id.ToString(), 1) 1 </label>&nbsp;&nbsp;
-                <label>@Html.RadioButton(item.question_id.ToString(), 2) 2 </label>&nbsp;&nbsp;
-                <label>@Html.RadioButton(item.question_id.ToString(), 3) 3 </label>&nbsp;&nbsp;
-                <label>@Html.RadioButton(item.question_id.ToString(), 4) 4 </label>&nbsp;&nbsp;
-                <label>@Html.RadioButton(item.question_id.ToString(), 5) 5 </label>
-            </div>
-            <div class="col col-md-10">
-                <label>comment: @Html.TextArea(item.question_id.ToString() + "_comment") </label>
+        <div class="form-horizontal">
+            @foreach (var item in Model)
+            {
+                <div class="form-group" style="text-align:center;">
+                    <h2>  @Html.Label(item.questions.question) <span style="color:red;">*</span></h2>
+                    <div class="col-md-10">
+                        <label class="radio-inline">@Html.RadioButton(item.question_id.ToString(), 1, new { @required = "required", @class = "rq" }) &nbsp;&nbsp;1 </label>
+                        <label class="radio-inline">@Html.RadioButton(item.question_id.ToString(), 2, new { @required = "required", @class = "rq" }) &nbsp;&nbsp;2 </label>
+                        <label class="radio-inline">@Html.RadioButton(item.question_id.ToString(), 3, new { @required = "required", @class = "rq" }) &nbsp;&nbsp;3 </label>
+                        <label class="radio-inline">@Html.RadioButton(item.question_id.ToString(), 4, new { @required = "required", @class = "rq" }) &nbsp;&nbsp;4 </label>
+                        <label class="radio-inline">@Html.RadioButton(item.question_id.ToString(), 5, new { @required = "required", @class = "rq" }) &nbsp;&nbsp;5 </label>
+                    </div>
+                    <div class="col col-md-10">
+                        <label>comment: @Html.TextArea(item.question_id.ToString() + "_comment", new { @class = "form-control", @cols = 200, @rows = 5 }) </label>
+                    </div>
+                </div>
+                <hr>
+            }
+            <input type="hidden" name="feedback_id" value="@ViewBag.feedback_id">
+            <div class="form-group">
+                <div class="col-md-12" style="margin-left:330px;">
+                    <input type="submit" value="Send" class="btn btn-primary btn-block" />
+                </div>
             </div>
         </div>
-        }
-       <input type="hidden" name="feedback_id" value="@ViewBag.feedback_id">
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Send" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
+    }
 </div>
