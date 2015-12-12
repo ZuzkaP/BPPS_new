@@ -1,5 +1,7 @@
 ﻿@model BPPS.Models.feedbacks
 
+<script src="js/Chart.min.js"></script>
+
 @{
     ViewBag.Title = "Details";
 }
@@ -89,3 +91,115 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.feedback_id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script type="text/javascript"> 
+    $(document).ready(function () {
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var numero = [1, 2, 3, 4, 5];
+        var zoznam = ["January", "February", "March", "April", "May", "June", "July"]
+        //var zoznam = '@ViewBag.zoznam';
+        //$("#zoznam").html(zoznam);
+        var data = {
+            labels: zoznam,
+            //labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: numero
+                    //data: [65, 59, 80, 81, 56, 55, 40]
+                    //asp to jqery
+                },
+                //{
+                //    label: "My Second dataset",
+                //    fillColor: "rgba(151,187,205,0.2)",
+                //    strokeColor: "rgba(151,187,205,1)",
+                //    pointColor: "rgba(151,187,205,1)",
+                //    pointStrokeColor: "#fff",
+                //    pointHighlightFill: "#fff",
+                //    pointHighlightStroke: "rgba(151,187,205,1)",
+                //    data: [28, 48, 40, 19, 86, 27, 90]
+                //}
+            ]
+        };
+        var myBarChart = new Chart(ctx).Bar(data);
+
+    });
+</script>
+
+<<!--canvas id="myPieChart" width="400" height="400"></canvas>
+
+<script type="text/javascript">    
+
+    $(document).ready(function () {
+
+        var ctx = document.getElementById("myPieChart").getContext("2d");
+        
+        var velmiSpokojny = '@ViewBag.VelmiSpokojny';
+        $("#VelmiSpokojny").html(velmiSpokojny);
+
+        var spokojny = '@ViewBag.Spokojny';
+        $("#Spokojny").html(spokojny);
+
+        var ok = '@ViewBag.Ok';
+        $("#Ok").html(ok);
+
+        var nespokojny = '@ViewBag.nespokojny';
+        $("#nespokojny").html(nespokojny);
+
+        var velmiNespokojny = '@ViewBag.VelmiNespokojny';
+        $("#VelmiNespokojny").html(velmiNespokojny);
+
+        var neodpovedali = '@ViewBag.Neodpovedali';
+        $("#Neodpovedali").html(neodpovedali);
+
+    var pieData = [
+    {
+        value: velmiSpokojny,
+        color: "#F7464A",
+        highlight: "#FF5A5E",
+        label: "Veľmi spokojný"
+    },
+    {
+        value: spokojny,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Spokojný"
+    },
+    {
+        value: ok,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Ok"
+    },
+    {
+        value: nespokojny,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Nespokojný"
+    },
+    {
+        value: velmiNespokojny,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Veľmi Nespokojný"
+    },
+    {
+        value: neodpovedali,
+        color: "#F7464A",
+        highlight: "#FF5A5E",
+        label: "Neodpovedali"
+    }
+    ];
+    //var myPieChart = new Chart(ctx).Doughnut(pieData);
+    var myPieChart = new Chart(ctx).Pie(pieData);
+    myPieChart.generateLegend();
+    });
+</script>-->

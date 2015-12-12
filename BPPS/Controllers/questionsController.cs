@@ -18,12 +18,7 @@ namespace BPPS.Controllers
         // GET: questions
         public ActionResult Index()
         {
-            var questions = from m in db.questions.ToList()
-                            select m;
-
-            questions = questions.Where(s => s.deprecated.ToUpper() == "N");
-            //return View(db.questions.ToList());
-            return View(questions);
+            return View(db.questions.ToList());
         }
 
         // GET: questions/Details/5
@@ -119,6 +114,24 @@ namespace BPPS.Controllers
             if (TryUpdateModel(questions))
             {
                 questions.deprecated = "y";
+                db.SaveChanges();
+            }
+            //db.questions.Remove(questions);
+            //db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Add(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            questions questions = db.questions.Find(id);
+            if (TryUpdateModel(questions))
+            {
+                questions.deprecated = "n";
                 db.SaveChanges();
             }
             //db.questions.Remove(questions);

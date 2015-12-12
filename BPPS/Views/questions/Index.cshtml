@@ -23,7 +23,14 @@
             @Html.DisplayFor(modelItem => item.question)
         </td>
         <td>
-            @Html.ActionLink("Delete", "Delete", new { id=item.question_id })
+            @if (item.deprecated == "n")
+            {
+                @Html.ActionLink("Delete", "Delete", new { id=item.question_id })            
+            }
+            else
+            {
+                @Html.ActionLink("Add", "Add", new { id=item.question_id })
+            }
         </td>
     </tr>
 }

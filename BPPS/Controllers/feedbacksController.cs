@@ -96,6 +96,12 @@ namespace BPPS.Controllers
             else
             {
                 ViewBag.feedbackResult = db.feedback_questions.Where(f => f.feedback_id == id).ToList();
+                List<string> zoznam = new List<string>();
+                zoznam.Add("Daco");
+                zoznam.Add("Zaco");
+                zoznam.Add("Nieco");
+
+                ViewBag.zoznam = zoznam;
             }
             return View(feedbacks);
         }
