@@ -18,6 +18,9 @@
             @Html.DisplayFor(model => model.acronym)
         </dd>
 
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
+
         <dt>
             @Html.DisplayName("Name")
         </dt>
@@ -25,6 +28,9 @@
         <dd>
             @Html.DisplayFor(model => model.name)
         </dd>
+
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
 
         <dt>
             @Html.DisplayName("Description")
@@ -34,6 +40,9 @@
             @Html.DisplayFor(model => model.description)
         </dd>
 
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
+
         <dt>
             @Html.DisplayName("Start date")
         </dt>
@@ -41,6 +50,9 @@
         <dd>
             @Html.DisplayFor(model => model.start_date)
         </dd>
+
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
 
         <dt>
             @Html.DisplayName("End date")
@@ -50,6 +62,9 @@
             @Html.DisplayFor(model => model.end_date)
         </dd>
 
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
+
         <dt>
             @Html.DisplayName("Status")
         </dt>
@@ -57,6 +72,9 @@
         <dd>
             @Html.DisplayFor(model => model.status)
         </dd>
+
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
 
         <dt>
             @Html.DisplayName("Department")
@@ -68,9 +86,10 @@
 
     </dl>
 </div>
+
 <p>
-    @Html.ActionLink("Back to all projects list", "Index")
+    @Html.ActionLink("Back (All projects) ", "Index", "", new { @class = "btn btn-primary" })  
 </p>
-<p>    
-    @Html.ActionLink("Back to my projects list", "IndexMy")
+<p> 
+    @Html.ActionLink("Back (My projects)", "IndexMy", "", new { @class = "btn btn-primary" })
 </p>

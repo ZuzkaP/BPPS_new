@@ -28,6 +28,8 @@
         <td style="text-align:center" colspan="2"><H3>@Html.DisplayName("Project Details")</H3></td>
         </div>
     </tr>
+    
+    <tr><td>&nbsp;</td></tr>
     <tr> 
         <td><b>@Html.DisplayName("Project Name")</b></td>
         <td>
@@ -35,6 +37,8 @@
             @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
         </td>
     </tr>
+    
+    <tr><td>&nbsp;</td></tr>
     <tr>
         <div>
         <td><b>@Html.DisplayName("Characteristic")</b></td>
@@ -44,6 +48,8 @@
         </td>
         </div>
     </tr>
+    
+    <tr><td>&nbsp;</td></tr>
     <tr>
         <td><b>@Html.DisplayName("Segment")</b></td>
         <td>
@@ -51,6 +57,8 @@
             @Html.ValidationMessageFor(model => model.department_id, "", new { @class = "text-danger" })
         </td>
     </tr>
+    
+    <tr><td>&nbsp;</td></tr>
     <tr>
         <td><b>@Html.DisplayName("Project Status")</b></td>
         <td>
@@ -58,6 +66,8 @@
             @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
         </td>
     </tr>
+    
+    <tr><td>&nbsp;</td></tr>
     <tr>
         <td><b>@Html.DisplayName("Start Date")</b></td>
         <td>
@@ -65,6 +75,8 @@
             @Html.ValidationMessageFor(model => model.start_date, "", new { @class = "text-danger" })
         </td>
     </tr>
+    
+    <tr><td>&nbsp;</td></tr>
     <tr>
         <td><b>@Html.DisplayName("End Date")</b></td>
         <td>
@@ -72,24 +84,21 @@
             @Html.ValidationMessageFor(model => model.end_date, "", new { @class = "text-danger" })
         </td>
     </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
+    <tr><td>&nbsp;</td></tr>
+    
     <tr>
         <td>&nbsp;</td>
         <td>
-            <input id="Submit1" type="submit" value="Submit" /</td>
+            <input id="Submit1" class="btn btn-block btn-success" type="submit" value="Submit" /</td>
         <td>></td>
         <td>&nbsp;</td>
-    </tr>
+    </tr>    
+    <tr><td>&nbsp;</td></tr>
 </table>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "IndexMy")
+    @Html.ActionLink("Back", "IndexMy", "", new { @class = "btn btn-primary" })
 </div>
 
 @section Scripts {

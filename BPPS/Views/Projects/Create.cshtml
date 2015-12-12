@@ -75,18 +75,18 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" class="btn btn-block btn-success" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to my projects", "IndexMy")
-</div>
-<div>
-    @Html.ActionLink("Back to all projects", "Index")
-</div>
+<p>
+    @Html.ActionLink("Back (All projects) ", "Index", "", new { @class = "btn btn-primary" })  
+</p>
+<p> 
+    @Html.ActionLink("Back (My projects)", "IndexMy", "", new { @class = "btn btn-primary" })
+</p>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

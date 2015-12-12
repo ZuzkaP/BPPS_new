@@ -72,7 +72,7 @@
             <td>
                 @if (item.received != null)
                 {
-                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id }, new { @class = "btn btn-info" })
                 }
             </td>
             <td>

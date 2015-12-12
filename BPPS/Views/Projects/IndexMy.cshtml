@@ -42,7 +42,7 @@
 <br>
 <h3>List of projects</h3>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "",new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -101,10 +101,10 @@
                     @Html.ActionLink("Create feedback", "Create", "feedbacks", new { project_id = item.project_id }, new { @class = "btn btn-success" })
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.project_id })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.project_id }, new { @class = "btn btn-warning" })
                 </td>
                 <td>
-                    @Html.ActionLink("View", "Details", new { id = item.project_id })
+                    @Html.ActionLink("View", "Details", new { id = item.project_id }, new { @class = "btn btn-info" })
                 </td>
             </asp:FormView>
         </tr>
