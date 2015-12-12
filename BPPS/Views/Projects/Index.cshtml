@@ -27,8 +27,8 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Sub Segment:</td>
-                    <td>@Html.DropDownList("subSegment", null, "All", new { @class = "form-control" })</td>
+                    <td>Project Status:</td>
+                    <td>@Html.DropDownList("status", null, "All", new { @class = "form-control" })</td>
                     <td>BPSS Status:</td>
                     <td>@Html.DropDownList("bpssStatus", null, "All", new { @class = "form-control" })</td>
                 </tr>
@@ -36,8 +36,8 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Project Status:</td>
-                    <td>@Html.DropDownList("status", null, "All", new { @class = "form-control" })</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                     <td colspan="2"><input class="btn btn-block btn-primary"  type="submit" value="Search" /></td>
                 </tr>
             </table>
@@ -45,7 +45,7 @@
     }
 </div>
 <br>
-   <h2 style="margin-left: 100px;">List of projects <sup><span class="badge"> @ViewBag.Count </span></sup></h2>
+   <h2>List of projects <sup><span class="badge"> @ViewBag.Count </span></sup></h2>
 
      <p>
         @Html.ActionLink("Create New", "Create")
@@ -64,9 +64,6 @@
             </th>
             <th>
                 @Html.DisplayName("Segment")
-            </th>
-            <th>
-                @Html.DisplayName("Sub-Segment")
             </th>
             <th>
                 @Html.DisplayName("Location")
@@ -97,13 +94,10 @@
                 @Html.DisplayFor(modelItem => item.departments.name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.departments.departments2.name)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.departments.locations.country)
             </td>
             <td>
-                @("Recieved")
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.status)

@@ -99,11 +99,13 @@ namespace BPPS.Controllers
 
         public ActionResult IndexMy(string location, string segment, string subSegment, string bpssStatus, string status)
         {
-            var projects = from m in db.Projects.ToList()
-                           select m;
+            var user_projects = from m in db.Users_projects.ToList()
+                                where m.project_role != "partner"
+                                select m.project_id;
+            var projects = db.Projects.Include(f => f.feedbacks).Where(f => user_projects.Any(p => p == f.project_id));
 
             var locationList = new List<string>();
-            var locationQry = from d in db.Projects.ToList()
+            var locationQry = from d in projects.ToList()
                               orderby d.departments.locations.country
                               select d.departments.locations.country;
 
@@ -111,7 +113,7 @@ namespace BPPS.Controllers
             ViewBag.location = new SelectList(locationList);
 
             var segmentList = new List<string>();
-            var segmentQry = from d in db.Projects.ToList()
+            var segmentQry = from d in projects.ToList()
                              orderby d.departments.name
                              select d.departments.name;
 
@@ -119,7 +121,7 @@ namespace BPPS.Controllers
             ViewBag.segment = new SelectList(segmentList);
 
             var subSegmentList = new List<string>();
-            var subSegmentQry = from d in db.Projects.ToList()
+            var subSegmentQry = from d in projects.ToList()
                                 orderby d.departments.name
                                 select d.departments.name;
 
@@ -129,7 +131,7 @@ namespace BPPS.Controllers
             //db.feedbacks.Where(f => f.projects.project_name == 'BPSS').toList()
 
             var bpssStatusList = new List<string>();
-            var bpssStatusQry = from d in db.Projects.ToList()
+            var bpssStatusQry = from d in projects.ToList()
                                 orderby d.status
                                 select d.status;
 
@@ -137,14 +139,14 @@ namespace BPPS.Controllers
             ViewBag.bpssStatus = new SelectList(bpssStatusList);
 
             var statusList = new List<string>();
-            var statusQry = from d in db.Projects.ToList()
+            var statusQry = from d in projects.ToList()
                             orderby d.status
                             select d.status;
 
 
             statusList.AddRange(statusQry.Distinct());
             ViewBag.status = new SelectList(statusList);
-
+            
             if (!String.IsNullOrEmpty(location))
             {
                 projects = projects.Where(s => s.departments.locations.country.ToUpper() == location.ToUpper());
@@ -171,12 +173,13 @@ namespace BPPS.Controllers
             }
 
 
-            List<int> user_projects;
+            //List<int> user_projects;
             user_projects = db.Users_projects.Where(up => up.project_role != "partner").Select(up => up.project_id).ToList();
             ViewBag.feedback_initiated = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.initiated).ToList();
             ViewBag.feedback_received = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.received).ToList();
             ViewBag.feedback_id = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.feedback_id).ToList();
-            return View(db.Projects.Include(f => f.feedbacks).Where(f => user_projects.Any(p => p == f.project_id)).ToList());
+            //return View(db.Projects.Include(f => f.feedbacks).Where(f => user_projects.Any(p => p == f.project_id)).ToList());
+            return View(projects.ToList());
         }
 
         // GET: Projects/Details/5

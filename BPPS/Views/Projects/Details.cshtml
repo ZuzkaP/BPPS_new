@@ -11,7 +11,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.acronym)
+            @Html.DisplayName("Acronym")
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @Html.DisplayName("Name")
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.description)
+            @Html.DisplayName("Description")
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.start_date)
+            @Html.DisplayName("Start date")
         </dt>
 
         <dd>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.end_date)
+            @Html.DisplayName("End date")
         </dt>
 
         <dd>
@@ -51,7 +51,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.status)
+            @Html.DisplayName("Status")
         </dt>
 
         <dd>
@@ -59,16 +59,18 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.department_id)
+            @Html.DisplayName("Department")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.department_id)
+            @Html.DisplayFor(model => model.departments.name)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.project_id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to all projects list", "Index")
+</p>
+<p>    
+    @Html.ActionLink("Back to my projects list", "IndexMy")
 </p>
