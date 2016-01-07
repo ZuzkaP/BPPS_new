@@ -1,6 +1,16 @@
 ﻿@model PagedList.IPagedList<BPPS.Models.feedbacks>
 @using PagedList.Mvc;
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="~/Scripts/jquery-ui-1.11.4.js" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+
+<!-- Code to wire up your DatePicker -->
+<script type="text/javascript">
+    $(function () {
+        // This will make every element with the class "date-picker" into a DatePicker element
+        $('.date-picker').datepicker({ dateFormat: 'dd/mm/yy', changeYear: true });
+    })
+</script>
 
 @{
     ViewBag.Title = "Index";
@@ -30,6 +40,26 @@
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
+
+
+            <tr>
+                <td>Feedback initialized:</td>
+                <td>@Html.TextBox("Feedback_initialized", null, new { @class = "form-control date-picker" })</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Feedback received:</td>
+                <td>@Html.TextBox("Feedback_received", null, new { @class = "form-control date-picker" })</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+
 
             <tr>
                 <td><input class="btn btn-primary btn-block" type="submit" value="Search" /></td>
