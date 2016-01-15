@@ -33,8 +33,26 @@
             <div class="nav-margin">
         <!--    <div class="navbar-collapse collapse">-->
                 @if (User.Identity.IsAuthenticated){ 
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Administration", "Index", "departments")</li>
+                <ul class="nav navbar-nav">                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                            Administration
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>@Html.ActionLink("Administration", "Index", "departments")</li>
+                          <!--  <li>@Html.ActionLink("Create feedback", "Create", "feedbacks")</li>-->
+                            <li class="dropdown-submenu">
+                                <a tabindex="0">
+                                    List of questions
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li tabindex="-1">@Html.ActionLink("For partner", "IndexPartner", "questions")</li>
+                                    <li tabindex="-1">@Html.ActionLink("For Siemens", "IndexSiemens", "questions")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
                             Feedbacks

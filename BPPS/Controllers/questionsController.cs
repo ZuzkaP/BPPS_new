@@ -16,11 +16,20 @@ namespace BPPS.Controllers
         private Entities db = new Entities();
 
         // GET: questions
-        public ActionResult Index()
+        public ActionResult IndexPartner()
         {
-            return View(db.questions.ToList());
-        }
+            List<int> partnerFeedback;
 
+            partnerFeedback = db.questions.Where(up => up.for_project_role == "partner").Select(up => up.question_id).ToList();
+            return View(db.questions.Where(f => partnerFeedback.Any(p => p == f.question_id)).OrderByDescending(p => p.question_id));
+        }
+        public ActionResult IndexSiemens()
+        {
+            List<int> siemensFeedback;
+
+            siemensFeedback = db.questions.Where(up => up.for_project_role == "siemens").Select(up => up.question_id).ToList();
+            return View(db.questions.Where(f => siemensFeedback.Any(p => p == f.question_id)).OrderByDescending(p => p.question_id));            
+        }
         // GET: questions/Details/5
         public ActionResult Details(int? id)
         {
@@ -37,23 +46,44 @@ namespace BPPS.Controllers
         }
 
         // GET: questions/Create
-        public ActionResult Create()
+        public ActionResult CreateForSiemens()
         {
-            return View();
+            return PartialView();
         }
-
+        public ActionResult CreateForPartner()
+        {
+            return PartialView();
+        }
         // POST: questions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "question")] questions questions)
+        public ActionResult CreateForSiemens([Bind(Include = "question")] questions questions)
         {
             if (ModelState.IsValid)
             {
+                questions.for_project_role = "siemens";
+                questions.deprecated = "n";
                 db.questions.Add(questions);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexSiemens");
+            }
+
+            return View(questions);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateForPartner([Bind(Include = "question")] questions questions)
+        {
+            if (ModelState.IsValid)
+            {
+                questions.for_project_role = "partner";
+                questions.deprecated = "n";
+                db.questions.Add(questions);
+                db.SaveChanges();
+                return RedirectToAction("IndexPartner");
             }
 
             return View(questions);
@@ -120,6 +150,23 @@ namespace BPPS.Controllers
             //db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Remove(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            questions questions = db.questions.Find(id);
+            if (TryUpdateModel(questions))
+            {
+                questions.deprecated = "y";
+                db.SaveChanges();
+            }
+            //db.questions.Remove(questions);
+            //db.SaveChanges();
+            return Redirect(Request.UrlReferrer.ToString());
+        }
 
         public ActionResult Add(int? id)
         {
@@ -136,7 +183,7 @@ namespace BPPS.Controllers
             }
             //db.questions.Remove(questions);
             //db.SaveChanges();
-            return RedirectToAction("Index");
+            return Redirect(Request.UrlReferrer.ToString());
         }
 
         protected override void Dispose(bool disposing)

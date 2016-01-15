@@ -407,11 +407,9 @@
     <Content Include="Views\Users_projects\Details.cshtml" />
     <Content Include="Views\Users_projects\Edit.cshtml" />
     <Content Include="Views\Users_projects\Index.cshtml" />
-    <Content Include="Views\questions\Create.cshtml" />
     <Content Include="Views\questions\Delete.cshtml" />
     <Content Include="Views\questions\Details.cshtml" />
     <Content Include="Views\questions\Edit.cshtml" />
-    <Content Include="Views\questions\Index.cshtml" />
     <Content Include="Views\Projects\Create.cshtml" />
     <Content Include="Views\Projects\Delete.cshtml" />
     <Content Include="Views\Projects\Details.cshtml" />
@@ -453,6 +451,10 @@
     <Content Include="Views\Emails\EmailExample.cshtml" />
     <Content Include="Views\Emails\View.cshtml" />
     <Content Include="Views\feedback_questions\All.cshtml" />
+    <Content Include="Views\questions\IndexPartner.cshtml" />
+    <Content Include="Views\questions\IndexSiemens.cshtml" />
+    <Content Include="Views\questions\CreateForSiemens.cshtml" />
+    <Content Include="Views\questions\CreateForPartner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
