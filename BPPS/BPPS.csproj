@@ -462,6 +462,9 @@
     <Content Include="Views\AspNetUsers\Details.cshtml" />
     <Content Include="Views\AspNetUsers\Edit.cshtml" />
     <Content Include="Views\AspNetUsers\Index.cshtml" />
+    <Content Include="Views\Projects\IndexPartner.cshtml" />
+    <Content Include="Views\feedbacks\CreateToSiemens.cshtml" />
+    <Content Include="Views\feedbacks\IndexForMe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

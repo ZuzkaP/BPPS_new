@@ -8,10 +8,11 @@ using System.Web;
 using System.Web.Mvc;
 using BPPS.Models;
 using PagedList;
+using Microsoft.AspNet.Identity;
 
 namespace BPPS.Controllers
 {
-    [Authorize(Roles = "admin, siemens")]
+    [Authorize(Roles = "admin, siemens, partner")]
     public class ProjectsController : Controller
     {
         private Entities db = new Entities();
@@ -249,6 +250,92 @@ namespace BPPS.Controllers
                 return RedirectToAction("Index");
             }
             return View(projects);
+        }
+
+        [Authorize(Roles = "admin, siemens, partner")]
+        public ActionResult IndexPartner(string location, string segment, string subSegment, string bpssStatus, string status)
+        {
+            var user_projects = from m in db.Users_projects.ToList()
+                                where m.project_role == "partner"
+                                select m.project_id;
+            var projects = db.Projects.Include(f => f.feedbacks).Where(f => user_projects.Any(p => p == f.project_id));
+
+            var locationList = new List<string>();
+            var locationQry = from d in projects.ToList()
+                              orderby d.departments.locations.country
+                              select d.departments.locations.country;
+
+            locationList.AddRange(locationQry.Distinct());
+            ViewBag.location = new SelectList(locationList);
+
+            var segmentList = new List<string>();
+            var segmentQry = from d in projects.ToList()
+                             orderby d.departments.name
+                             select d.departments.name;
+
+            segmentList.AddRange(segmentQry.Distinct());
+            ViewBag.segment = new SelectList(segmentList);
+
+            var subSegmentList = new List<string>();
+            var subSegmentQry = from d in projects.ToList()
+                                orderby d.departments.name
+                                select d.departments.name;
+
+            subSegmentList.AddRange(subSegmentQry.Distinct());
+            ViewBag.subSegment = new SelectList(subSegmentList);
+
+            //db.feedbacks.Where(f => f.projects.project_name == 'BPSS').toList()
+
+            var bpssStatusList = new List<string>();
+            var bpssStatusQry = from d in projects.ToList()
+                                orderby d.status
+                                select d.status;
+
+            bpssStatusList.AddRange(bpssStatusQry.Distinct());
+            ViewBag.bpssStatus = new SelectList(bpssStatusList);
+
+            var statusList = new List<string>();
+            var statusQry = from d in projects.ToList()
+                            orderby d.status
+                            select d.status;
+
+
+            statusList.AddRange(statusQry.Distinct());
+            ViewBag.status = new SelectList(statusList);
+
+            if (!String.IsNullOrEmpty(location))
+            {
+                projects = projects.Where(s => s.departments.locations.country.ToUpper() == location.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(segment))
+            {
+                projects = projects.Where(s => s.departments.name.ToUpper() == segment.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(subSegment))
+            {
+                projects = projects.Where(s => s.departments.name.ToUpper() == subSegment.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(bpssStatus))
+            {
+                projects = projects.Where(s => s.status.ToUpper() == bpssStatus.ToUpper());
+            }
+
+            if (!String.IsNullOrEmpty(status))
+            {
+                projects = projects.Where(s => s.status.ToUpper() == status.ToUpper());
+            }
+
+            string sessionId = User.Identity.GetUserId();
+            //List<int> user_projects;
+            user_projects = db.Users_projects.Where(up => up.project_role == "partner" && up.Id == sessionId).Select(up => up.project_id).ToList();
+            ViewBag.feedback_initiated = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.initiated).ToList();
+            ViewBag.feedback_received = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.received).ToList();
+            ViewBag.feedback_id = db.feedbacks.Where(f => user_projects.Any(p => p == f.Projects.project_id)).Select(f => f.feedback_id).ToList();
+            //return View(db.Projects.Include(f => f.feedbacks).Where(f => user_projects.Any(p => p == f.project_id)).ToList());
+            return View(projects.ToList());
         }
 
         // GET: Projects/Delete/5

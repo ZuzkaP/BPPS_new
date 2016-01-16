@@ -60,7 +60,7 @@
         @if (User.Identity.IsAuthenticated){ 
 
            <a class="navbar-brand" href="@Url.Action("Index", "Home", "Home")">Home</a>  
-            if(User.IsInRole("admin")){           
+            if (User.IsInRole("admin")) {
            <div class="collapse navbar-collapse" id="myNavbar">                
               <ul class="nav navbar-nav">
                   
@@ -119,11 +119,13 @@
                 @Html.Partial("_LoginPartial")                
             </div>
             }
-            else if(User.IsInRole("partner"))
+            else if (User.IsInRole("partner"))
             {
                 <div class="collapse navbar-collapse" id="myNavbar">                
                     <ul class="nav navbar-nav">
                         <li tabindex="-1">@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
+                        <li tabindex="-1">@Html.ActionLink("Feedbacks on my projects", "IndexForMe", "feedbacks")</li>
+                        <li tabindex="-1">@Html.ActionLink("My projects", "IndexPartner", "Projects")</li>
                     </ul>
                     @Html.Partial("_LoginPartial")                
                 </div>
