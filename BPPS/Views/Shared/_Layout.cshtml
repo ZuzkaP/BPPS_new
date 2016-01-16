@@ -15,27 +15,57 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/Chart")
 
+     <style>
+         .affix {
+             top: 0;
+             width: 100%;
+         }
+
+             .affix + .container-fluid {
+                 padding-top: 70px;
+             }
+
+         .top-buffer {
+             margin-top: -100px;
+         }
+     </style>
 </head>
+@using Microsoft.AspNet.Identity
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <a href="@Url.Action("Index", "Home", "Home")" class="navbar-brand">
-            <img src="~/Content/Images/logo_siemens.png" title="title" alt="additional title" style="background-color:transparent;" width=300 height=85" />
-        </a>
-        <div class="container">          
+    <header class="container-fluid" style="background-color:transparent; color:#009B98; height: 85px;">
+    <div class="row top-buffer">
+                <div class="col-sm-4">
+                    <a href="http://www.siemens.com/entry/sk/sk/" target="_blank">
+                        <img src="~/Content/Images/logo_siemens.png" title="title" alt="additional title" style="background-color:transparent; margin-left:50px" width=300 height=85" />
+                    </a>
+                </div>
+
+                <div class="col-sm-8">
+                    <h1 style="margin-left:200px;"> Business partner satisfaction survey</h1>
+                </div>
+         </div>
+            
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                   
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
                 </button>
             </div>
-            <div class="nav-margin">
-        <!--    <div class="navbar-collapse collapse">-->
-                @if (User.Identity.IsAuthenticated){ 
-                <ul class="nav navbar-nav">                    
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+    </header>
+    <nav class="navbar navbar-inverse">        
+        
+        <div class="container-fluid" style="margin-left:50px;">
+            
+        @if (User.Identity.IsAuthenticated){ 
+
+           <a class="navbar-brand" href="@Url.Action("Index", "Home", "Home")">Home</a>  
+            if(User.IsInRole("admin")){           
+           <div class="collapse navbar-collapse" id="myNavbar">                
+              <ul class="nav navbar-nav">
+                  
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
                             Administration
                             <span class="caret"></span>
                         </a>
@@ -52,50 +82,59 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                </li>
+
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
                             Feedbacks
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                          <!--  <li>@Html.ActionLink("Create feedback", "Create", "feedbacks")</li>-->
-                            <li class="dropdown-submenu">
-                                <a tabindex="0">
-                                    List of feedbacks
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li tabindex="-1">@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
-                                    <li tabindex="-1">@Html.ActionLink("Feedbacks on my projects", "IndexOnMy", "feedbacks")</li>
-                                    <li tabindex="-1">@Html.ActionLink("All feedbacks", "Index", "feedbacks")</li>
-                                </ul>
-                            </li>
+                            <li tabindex="-1">@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
+                            <li tabindex="-1">@Html.ActionLink("Feedbacks on my projects", "IndexOnMy", "feedbacks")</li>
+                            <li tabindex="-1">@Html.ActionLink("All feedbacks", "Index", "feedbacks")</li>
                         </ul>
-                    </li>   
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
                         Project managment
                         <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Add project", "Create", "Projects")</li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="0">
-                                    List of projects
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("My projects", "IndexMy", "Projects")</li>
-                                    <li>@Html.ActionLink("All projects", "Index", "Projects")</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>}
+                   </a>
+                   <ul class="dropdown-menu">
+                       <li>@Html.ActionLink("Add project", "Create", "Projects")</li>
+                       <li class="dropdown-submenu">
+                           <a tabindex="0">List of projects</a>
+                           <ul class="dropdown-menu">
+                              <li>@Html.ActionLink("My projects", "IndexMy", "Projects")</li>
+                              <li>@Html.ActionLink("All projects", "Index", "Projects")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+              </ul>
+              <!--<ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>-->
+                @Html.Partial("_LoginPartial")                
+            </div>
+            }
+            else if(User.IsInRole("partner"))
+            {
+                <div class="collapse navbar-collapse" id="myNavbar">                
+                    <ul class="nav navbar-nav">
+                        <li tabindex="-1">@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")                
                 </div>
+            }
+            }
+            else{                
                 @Html.Partial("_LoginPartial")
-            
-        </div>
-    </div>
+            }
+          </div>
+    </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -106,5 +145,13 @@
 
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            /* affix the navbar after scroll below header */
+            $(".navbar").affix({ offset: { top: $("header").outerHeight(true) } });
+        });
+</script>
+
 </body>
 </html>
