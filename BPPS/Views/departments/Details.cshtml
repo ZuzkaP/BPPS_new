@@ -9,38 +9,50 @@
 </head>
 <body>
     <div>
-        <h4>departments</h4>
+        <h2>Department details</h2>
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                @Html.DisplayNameFor(model => model.name)
+                @Html.DisplayName("Department:")
             </dt>
     
             <dd>
                 @Html.DisplayFor(model => model.name)
             </dd>
+            
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.locations.town)
+                @Html.DisplayName("Location (town):")
             </dt>
     
             <dd>
                 @Html.DisplayFor(model => model.locations.town)
             </dd>
+            
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.departments2.name)
+                @Html.DisplayName("Sub-department:")
             </dt>
     
             <dd>
                 @Html.DisplayFor(model => model.departments2.name)
             </dd>
+            
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
+
+            <dt>
+                @Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-warning"})
+            </dt>
+            <dd>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.department_id }, new{@class="btn btn-primary"})
+            </dd>
     
         </dl>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.department_id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
 </body>
 </html>

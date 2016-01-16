@@ -42,7 +42,7 @@ namespace BPPS.Controllers
         {
             ViewBag.location_id = new SelectList(db.locations, "location_id", "town");
             ViewBag.dep_department_id = new SelectList(db.departments, "department_id", "name");
-            return View();
+            return PartialView();
         }
 
         // POST: departments/Create

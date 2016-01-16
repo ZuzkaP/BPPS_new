@@ -1,31 +1,37 @@
 ﻿@model IEnumerable<BPPS.Models.departments>
 
-<!DOCTYPE html>
-
 @{
     ViewBag.Title = "Index";
 }
 
-<div class="page-header"><h2> Administration</h2></div>
+ <p>&nbsp</p>
+<div class="well well-sm"><h1 style="margin-left:100px;"> Departments</h1></div>
 
+    <div id='newDepartmentModal' class="modal fade" role="dialog" data-url='@Url.Action("Create")'>
+        <div id='departmentContainer'></div>
+    </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#newDepartment').click(function() {
+                var url = $('#newDepartmentModal').data('url');
+
+                $.get(url, function(data) {
+                    $('#departmentContainer').html(data);
+                     $('#newDepartmentModal').modal('show');
+                });
+             });
+        });
+    </script>
+
     <p>
-        @Html.ActionLink("Create New", "Create")
+        <button id='newDepartment' class="btn btn-primary btn-lg">New department</button>
     </p>
-    <table class="table">
+    <table class="table table-striped">
         <tr>
-            <th>
-                Name</th>
-            <th>Town
-            </th>
-            <th>Name
-            </th>
+            <th><h3> Departments  </h3></th>
+            <th><h3> Town  </h3></th>
+            <th><h3>Sub-departments</h3></th>
             <th></th>
         </tr>
     
@@ -41,13 +47,11 @@
                 @Html.DisplayFor(modelItem => item.departments2.name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.department_id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.department_id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.department_id })
+                @Html.ActionLink("Edit", "Edit", new { id=item.department_id }, new{@class = "btn btn-warning"}) 
+                @Html.ActionLink("Details", "Details", new { id=item.department_id }, new{@class = "btn btn-info"}) 
+                @Html.ActionLink("Delete", "Delete", new { id=item.department_id }, new {@class = "btn btn-danger"})
             </td>
         </tr>
     }
     
     </table>
-</body>
-</html>
