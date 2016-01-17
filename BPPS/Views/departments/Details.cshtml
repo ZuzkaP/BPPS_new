@@ -46,10 +46,18 @@
         <dd>&nbsp;</dd>
 
             <dt>
-                @Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-warning"})
+                <!--@Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-warning"})-->
+                <a href="@Url.Action("Index", "departments")" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                    Back to List
+                </a>
             </dt>
             <dd>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.department_id }, new{@class="btn btn-primary"})
+                <!--@Html.ActionLink("Edit", "Edit", new { id = Model.department_id }, new{@class="btn btn-primary"})-->
+                <a href="@Url.Action("Edit", "departments", new { id = Model.department_id })" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Edit
+                </a>
             </dd>
     
         </dl>

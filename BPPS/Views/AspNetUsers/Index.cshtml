@@ -7,7 +7,10 @@
     <div class="well well-sm"> <h1 style="margin-left:100px;"> Users </h1></div>
 
 <p>
-        <button id='newUser' class="btn btn-primary btn-lg">New user</button>
+        <button id='newUser' class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus"></span>
+            New user
+        </button>
 </p>
 <table class="table table-striped">
     <tr>
@@ -47,9 +50,21 @@
             @Html.DisplayFor(modelItem => item.PhoneNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new {@class = "btn btn-warning"}) 
-            @Html.ActionLink("Details", "Details", new { id=item.Id }, new {@class = "btn btn-info"}) 
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new {@class = "btn btn-danger"})
+            <!--@Html.ActionLink("Edit", "Edit", new { id=item.Id }, new {@class = "btn btn-warning"})--> 
+            <a href="@Url.Action("Edit", "AspNetUsers",new { id=item.Id })" class="btn btn-warning">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                Edit
+            </a>
+            <!--@Html.ActionLink("Details", "Details", new { id=item.Id }, new {@class = "btn btn-info"})--> 
+            <a href="@Url.Action("Details", "AspNetUsers",new { id=item.Id })" class="btn btn-info">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                Details
+            </a>
+            <!--@Html.ActionLink("Delete", "Delete", new { id=item.Id }, new {@class = "btn btn-danger"})-->
+            <a href="@Url.Action("Delete", "AspNetUsers",new { id=item.Id })" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                Delete
+            </a>
         </td>
     </tr>
 }

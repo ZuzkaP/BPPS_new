@@ -15,7 +15,11 @@
             @Html.ActionLink("NO (back)", "", "", "", new { @class = "btn btn-warning btn-block", href = Request.UrlReferrer})
     </div>
     <div class="col-sm-2">
-            <input type="submit" value="YES (delete)" class="btn btn-danger btn-block" /> 
+            <button type="submit" class="btn btn-danger btn-block">
+                <span class="glyphicon glyphicon-trash"></span> 
+                YES (delete)
+            </button>
+            <!--<input type="submit" value="YES (delete)" class="btn btn-danger btn-block" />--> 
         </div>
         </div>
 </div>

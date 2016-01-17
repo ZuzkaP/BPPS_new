@@ -129,9 +129,21 @@
     <tr>
 
         <td>&nbsp</td>
-        <td>@Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-block btn-warning"})</td>
+        <td>
+            <!--@Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-block btn-warning"})-->
+            <a href="@Url.Action("Index", "AspNetUsers")" class="btn btn-warning btn-block">
+               <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+               Back to List
+            </a>
+        </td>
         <td>&nbsp</td>
-        <td colspan="4"><input id="Submit1" class="btn btn-block btn-success" type="submit" value="Submit" </td>
+        <td colspan="1">
+            <!--<input id="Submit1" class="btn btn-block btn-success" type="submit" value="Submit" 
+            --><button type="submit" class="btn btn-success btn-block">
+                <span class="glyphicon glyphicon-check"></span> 
+                Submit
+            </button>
+        </td>
     </tr>    
     <tr><td>&nbsp;</td></tr>
 </table>

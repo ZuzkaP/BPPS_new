@@ -33,7 +33,13 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td colspan="4"><input class="btn btn-block btn-primary" type="submit" value="Search" /></td>
+                    <td colspan="4">
+                        <!--<input class="btn btn-block btn-primary" type="submit" value="Search" />-->
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-search"></span> 
+                            Search
+                        </button>
+                    </td>
                 </tr>
             </table>
         </p>
@@ -41,7 +47,10 @@
 </div>
 <br>
 <p>
-    <button id='newProject' class="btn btn-primary btn-lg">New project</button>
+    <button id='newProject' class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        New project
+    </button>
 </p>
 <table class="table table-striped">
     <tr>
@@ -99,13 +108,25 @@
                     @Html.DisplayFor(modelItem => item.status)
                 </td>
                 <td>
-                    @Html.ActionLink("Create feedback", "Create", "feedbacks", new { project_id = item.project_id }, new { @class = "btn btn-success" })
+                    <!--@Html.ActionLink("Create feedback", "Create", "feedbacks", new { project_id = item.project_id }, new { @class = "btn btn-success" })-->
+                    <a href="@Url.Action("Create", "feedbacks", new { project_id = item.project_id })" class="btn btn-success">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                        Create feedback
+                    </a>
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.project_id }, new { @class = "btn btn-warning" })
+                    <!--@Html.ActionLink("Edit", "Edit", new { id = item.project_id }, new { @class = "btn btn-warning" })-->
+                    <a href="@Url.Action("Edit", "Projects", new { id = item.project_id })" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        Edit
+                    </a>
                 </td>
                 <td>
-                    @Html.ActionLink("View", "Details", new { id = item.project_id }, new { @class = "btn btn-info" })
+                    <!--@Html.ActionLink("View", "Details", new { id = item.project_id }, new { @class = "btn btn-info" })-->
+                    <a href="@Url.Action("Details", "Projects", new { id = item.project_id })" class="btn btn-info">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                        Details
+                    </a>
                 </td>
             </asp:FormView>
         </tr>

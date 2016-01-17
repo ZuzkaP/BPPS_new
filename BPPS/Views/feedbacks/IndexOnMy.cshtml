@@ -65,22 +65,38 @@
             <td>
                 @if (item.initiated == null)
                 {
-                    @Html.ActionLink("Initialize", "SendFeedbackEmail", new { id = item.feedback_id }, new{@class = "btn btn-success"})
+                    <!--@Html.ActionLink("Initialize", "SendFeedbackEmail", new { id = item.feedback_id }, new{@class = "btn btn-success"})-->
+                    <a href="@Url.Action("SendFeedbackEmail", "feedbacks",new { id=item.feedback_id })" class="btn btn-success">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        Initialize
+                    </a> 
                 }
                 else if(item.initiated != null && item.received == null)
                 {
-                    @Html.ActionLink("Remind", "SendFeedbackEmail", new { id = item.feedback_id }, new{@class = "btn btn-success"})
+                    <!--@Html.ActionLink("Remind", "SendFeedbackEmail", new { id = item.feedback_id }, new{@class = "btn btn-success"})-->
+                    <a href="@Url.Action("SendFeedbackEmail", "feedbacks",new { id=item.feedback_id })" class="btn btn-success">
+                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                        Remind
+                    </a>
                 }
                 else if (item.initiated != null && item.received != null)
                 {
-                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id }, new{@class = "btn btn-info"})
+                    <!--@Html.ActionLink("Details", "Details", new { id = item.feedback_id }, new{@class = "btn btn-info"})-->
+                     <a href="@Url.Action("Details", "feedbacks",new { id=item.feedback_id })" class="btn btn-info">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                        Details
+                    </a>
                 }
 
             </td>
             <td>
                 @if (item.initiated == null)
                 {
-                    @Html.ActionLink("Edit", "Edit", "feedback_questions", new { id = item.feedback_id }, new{@class ="btn btn-warning"})
+                    <!--@Html.ActionLink("Edit", "Edit", "feedback_questions", new { id = item.feedback_id }, new{@class ="btn btn-warning"})-->
+                    <a href="@Url.Action("Edit", "feedback_questions",new { id=item.feedback_id })" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        Edit
+                    </a>
                 }
                 else if (item.initiated != null && item.received != null)
                 {
@@ -90,7 +106,11 @@
             <td>
                 @if (item.initiated == null && item.received == null)
                 {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.feedback_id }, new{@class = "btn btn-danger"})
+                    <!--@Html.ActionLink("Delete", "Delete", new { id = item.feedback_id }, new{@class = "btn btn-danger"})-->
+                  <a href="@Url.Action("Delete", "feedbacks",new { id=item.feedback_id })" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        Delete
+                    </a>
                 }
                 else if (item.initiated != null && item.received != null)
                 {

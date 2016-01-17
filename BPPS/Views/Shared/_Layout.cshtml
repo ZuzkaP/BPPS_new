@@ -59,19 +59,23 @@
             
         @if (User.Identity.IsAuthenticated){ 
 
-           <a class="navbar-brand" href="@Url.Action("Index", "Home", "Home")">Home</a>  
+           <a class="navbar-brand" href="@Url.Action("Index", "Home", "Home")"><span class="glyphicon glyphicon-home"></span> Home</a>  
             if (User.IsInRole("admin")) {
            <div class="collapse navbar-collapse" id="myNavbar">                
               <ul class="nav navbar-nav">
                   
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
-                            Administration
+                      <span class="glyphicon glyphicon-briefcase"></span> Administration
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                          <li>@Html.ActionLink("Departments", "Index", "departments")</li>
-                            <li>@Html.ActionLink("Users", "Index", "AspNetUsers")</li>
+                          <li>
+                              @Html.ActionLink("Departments", "Index", "departments")
+                          </li>
+                            <li>
+                                @Html.ActionLink("Users", "Index", "AspNetUsers")
+                            </li>
                             <li class="dropdown-submenu">
                                 <a tabindex="0">
                                     List of questions
@@ -86,6 +90,7 @@
 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                      <span class="glyphicon glyphicon-th-large"></span>
                             Feedbacks
                             <span class="caret"></span>
                         </a>
@@ -98,6 +103,7 @@
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" tabindex="0" data-submenu aria-expanded="true">
+                        <span class="glyphicon glyphicon-th-large"></span>
                         Project managment
                         <span class="caret"></span>
                    </a>
@@ -121,12 +127,11 @@
             }
             else if (User.IsInRole("partner"))
             {
-                <div class="collapse navbar-collapse" id="myNavbar">                
-                    <ul class="nav navbar-nav">
-                        <li tabindex="-1">@Html.ActionLink("My feedbacks", "IndexMy", "feedbacks")</li>
-                        <li tabindex="-1">@Html.ActionLink("Feedbacks on my projects", "IndexForMe", "feedbacks")</li>
-                        <li tabindex="-1">@Html.ActionLink("My projects", "IndexPartner", "Projects")</li>
-                    </ul>
+                <div class="collapse navbar-collapse" id="myNavbar">  
+                    <a class="navbar-brand" href="@Url.Action("IndexMy", "feedbacks")"><span class="glyphicon glyphicon-th-large"></span> My feedbacks</a>
+                    <a class="navbar-brand" href="@Url.Action("IndexForMe","feedbacks")"><span class="glyphicon glyphicon-th-large"></span> Feedbacks on my projects</a>
+                    <a class="navbar-brand" href="@Url.Action("IndexPartner", "Projects")"><span class="glyphicon glyphicon-th-large"></span> My projects</a>              
+
                     @Html.Partial("_LoginPartial")                
                 </div>
             }

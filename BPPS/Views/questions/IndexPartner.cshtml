@@ -23,26 +23,12 @@
            </li>          
         </ul>
     </div>
-
-    <div id='newQuestionModal' class="modal fade" role="dialog" data-url='@Url.Action("CreateForPartner")'>
-        <div id='questionContainer'></div>
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#newQuestion').click(function() {
-                var url = $('#newQuestionModal').data('url');
-
-                $.get(url, function(data) {
-                    $('#questionContainer').html(data);
-                     $('#newQuestionModal').modal('show');
-                });
-             });
-        });
-    </script>
-
+    
     <p>
-        <button id='newQuestion' class="btn btn-primary btn-lg">New question</button>
+        <button id='newQuestion' class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus"></span>
+            New question
+        </button>
     </p>
  
 
@@ -82,11 +68,19 @@
         <td>
             @if (item.deprecated == "n")
             {
-                @Html.ActionLink("Deactivate", "Remove", new { id=item.question_id }, new { @class = "btn btn-danger" })
+                <!--@Html.ActionLink("Deactivate", "Remove", new { id=item.question_id }, new { @class = "btn btn-danger" })-->
+                <a href="@Url.Action("Remove", "questions",new { id=item.question_id })" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                    Deactivate
+                </a>
             }
             else
             {
-                @Html.ActionLink("Activate", "Add", new { id=item.question_id }, new { @class = "btn btn-success" })
+                <!--@Html.ActionLink("Activate", "Add", new { id=item.question_id }, new { @class = "btn btn-success" })-->
+                <a href="@Url.Action("Add", "questions",new { id=item.question_id })" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                    Activate
+                </a>
             }
         </td>
         </asp:FormView>
@@ -94,3 +88,21 @@
 }
 
 </table>
+
+
+    <div id='newQuestionModal' class="modal fade" role="dialog" data-url='@Url.Action("CreateForPartner")'>
+        <div id='questionContainer'></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#newQuestion').click(function() {
+                var url = $('#newQuestionModal').data('url');
+
+                $.get(url, function(data) {
+                    $('#questionContainer').html(data);
+                     $('#newQuestionModal').modal('show');
+                });
+             });
+        });
+    </script>

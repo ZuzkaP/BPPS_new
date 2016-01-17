@@ -33,7 +33,13 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td colspan="4"><input class="btn btn-block btn-primary" type="submit" value="Search" /></td>
+                    <td colspan="4">
+                        <!--<input class="btn btn-block btn-primary" type="submit" value="Search" />-->
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-search"></span> 
+                            Search
+                        </button>
+                    </td>
                 </tr>
             </table>
         </p>
@@ -76,9 +82,18 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.name)
                 </td>
-                <td></td>
                 <td>
-                    @Html.ActionLink("Create feedback for siemens", "CreateToSiemens", "feedbacks", new { project_id = item.project_id }, new { @class = "btn btn-success" })
+                    @Html.DisplayName("Inactive")
+                </td>
+                <td>
+                    @Html.DisplayName("Finished")
+                </td>
+                <td>
+                    <!--@Html.ActionLink("Create feedback for siemens", "CreateToSiemens", "feedbacks", new { project_id = item.project_id }, new { @class = "btn btn-success" })-->
+                    <a href="@Url.Action("CreateToSiemens", "feedbacks", new { project_id = item.project_id })" class="btn btn-success">
+                       <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                        Create feedback for Siemens
+                    </a>
                 </td>
             </asp:FormView>
         </tr>

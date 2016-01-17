@@ -6,25 +6,8 @@
 
 <div class="well well-sm"><h1 style="margin-left:100px;"> Departments</h1></div>
 
-    <div id='newDepartmentModal' class="modal fade" role="dialog" data-url='@Url.Action("Create")'>
-        <div id='departmentContainer'></div>
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#newDepartment').click(function() {
-                var url = $('#newDepartmentModal').data('url');
-
-                $.get(url, function(data) {
-                    $('#departmentContainer').html(data);
-                     $('#newDepartmentModal').modal('show');
-                });
-             });
-        });
-    </script>
-
     <p>
-        <button id='newDepartment' class="btn btn-primary btn-lg">New department</button>
+        <button id='newDepartment' class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus"></span> New department</button>
     </p>
     <table class="table table-striped">
         <tr>
@@ -46,11 +29,41 @@
                 @Html.DisplayFor(modelItem => item.departments2.name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.department_id }, new{@class = "btn btn-warning"}) 
-                @Html.ActionLink("Details", "Details", new { id=item.department_id }, new{@class = "btn btn-info"}) 
-                @Html.ActionLink("Delete", "Delete", new { id=item.department_id }, new {@class = "btn btn-danger"})
+                <!--@Html.ActionLink("Edit", "Edit", new { id=item.department_id }, new{@class = "btn btn-warning"})--> 
+                <a href="@Url.Action("Edit", "departments",new { id=item.department_id })" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Edit
+                </a>
+
+                <!--@Html.ActionLink("Details", "Details", new { id=item.department_id }, new{@class = "btn btn-info"})-->
+                <a href="@Url.Action("Details", "departments",new { id=item.department_id })" class="btn btn-info">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                    Details
+                </a> 
+                <!--@Html.ActionLink("Delete", "Delete", new { id=item.department_id }, new {@class = "btn btn-danger"})-->
+                <a href="@Url.Action("Delete", "departments",new { id=item.department_id })" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    Delete
+                </a>
             </td>
         </tr>
     }
     
     </table>
+
+    <div id='newDepartmentModal' class="modal fade" role="dialog" data-url='@Url.Action("Create")'>
+        <div id='departmentContainer'></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#newDepartment').click(function() {
+                var url = $('#newDepartmentModal').data('url');
+
+                $.get(url, function(data) {
+                    $('#departmentContainer').html(data);
+                     $('#newDepartmentModal').modal('show');
+                });
+             });
+        });
+    </script>

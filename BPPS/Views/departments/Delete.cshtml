@@ -49,10 +49,18 @@
         <dd>&nbsp;</dd>
 
             <dt>
-                @Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-warning"})
+                <!--@Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-warning"})-->
+                <a href="@Url.Action("Index", "departments")" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                    Back to List
+               </a>
             </dt>
             <dd>
-                 <input type="submit" value="Delete" class="btn btn-danger" />
+                 <!--<input type="submit" value="Delete" class="btn btn-danger" />-->
+                 <button type="submit" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span> 
+                    Delete
+                 </button>
             </dd>
     
         </dl>

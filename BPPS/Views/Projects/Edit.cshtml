@@ -84,22 +84,19 @@
             @Html.ValidationMessageFor(model => model.end_date, "", new { @class = "text-danger" })
         </td>
     </tr>
-    <tr><td>&nbsp;</td></tr>
-    
-    <tr>
-        <td>&nbsp;</td>
-        <td>
-            <input id="Submit1" class="btn btn-block btn-success" type="submit" value="Submit" /</td>
-        <td>></td>
-        <td>&nbsp;</td>
-    </tr>    
-    <tr><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td></tr>    
 </table>
 }
 
 <div class="row">
     <div class="col-sm-2">
         @Html.ActionLink("Back", "", "", new { @class = "btn btn-primary btn-block", href = Request.UrlReferrer})
+     </div>
+    <div class="col-sm-2">
+             <button type="submit" class="btn btn-block btn-success">
+                <span class="glyphicon glyphicon-check"></span> 
+                Submit
+            </button>
      </div>
 </div>
 

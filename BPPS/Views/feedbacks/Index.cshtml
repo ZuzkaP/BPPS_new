@@ -62,7 +62,13 @@
 
 
             <tr>
-                <td><input class="btn btn-primary btn-block" type="submit" value="Search" /></td>
+                <td>
+                    <!--<input class="btn btn-primary btn-block" type="submit" value="Search" />-->
+                    <button type="submit" class="btn btn-primary btn-block">
+                       <span class="glyphicon glyphicon-search"></span>
+                       Search
+                    </button>
+                </td>
             </tr>
         </table>
 
@@ -120,7 +126,11 @@
                 @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.feedback_id }, new { @class = "btn btn-info" })
+                <!--@Html.ActionLink("Details", "Details", new { id = item.feedback_id }, new { @class = "btn btn-info" })-->
+                <a href="@Url.Action("Details", "feedbacks",new { id=item.feedback_id })" class="btn btn-info">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                    Details
+                </a> 
             </td>
             <td>
                 <a href="@Url.Action("PrintPDF","feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>

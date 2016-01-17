@@ -142,11 +142,19 @@
         <dd>&nbsp;</dd>
 
         <dt>
-            @Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-block btn-primary"})
+            <!--@Html.ActionLink("Back to List", "Index", "", new{@class = "btn btn-block btn-primary"})-->
+            <a href="@Url.Action("Index", "AspNetUsers")" class="btn btn-warning btn-block">
+               <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+               Back to List
+            </a>
         </dt>
 
         <dd>
-            @Html.ActionLink("Edit user", "Edit", new { id = Model.Id }, new{@class = "btn btn-warning"})
+            <!--@Html.ActionLink("Edit user", "Edit", new { id = Model.Id }, new{@class = "btn btn-warning"})-->
+            <a href="@Url.Action("Edit", "AspNetUsers",new { id=Model.Id })" class="btn btn-primary">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                Edit user
+            </a>
         </dd>
 
         <dt>&nbsp;</dt>
