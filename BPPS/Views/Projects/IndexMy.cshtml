@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="page-header"> <h1>My projects</h1> </div>
+<div class="well well-sm"> <h1 style="margin-left:100px;">My projects</h1> </div>
 <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#filterForm">Filter</button>
 <div id="filterForm" class="collapse">
     @using (Html.BeginForm())
@@ -40,11 +40,10 @@
     }
 </div>
 <br>
-<h3>List of projects</h3>
 <p>
-    @Html.ActionLink("Create New", "Create", "",new { @class = "btn btn-success" })
+    <button id='newProject' class="btn btn-primary btn-lg">New project</button>
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayName("Serial Number")
@@ -67,6 +66,8 @@
         <th>
             @Html.DisplayName("Project Status")
         </th>
+        <th></th>
+        <th></th>
         <th></th>
     </tr>
     @{ int rowNumberAllProjects = 0;}
@@ -110,3 +111,20 @@
         </tr>
     }
 </table>
+
+    <div id='newProjectModal' class="modal fade" role="dialog" data-url='@Url.Action("Create")'>
+        <div id='projectContainer'></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#newProject').click(function() {
+                var url = $('#newProjectModal').data('url');
+
+                $.get(url, function(data) {
+                    $('#projectContainer').html(data);
+                     $('#newProjectModal').modal('show');
+                });
+             });
+        });
+    </script>

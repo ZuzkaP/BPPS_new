@@ -7,7 +7,7 @@
     ViewBag.Title = "Index";
 }
 
-<div class="page-header"> <h1> All projects</h1> </div>
+<div class="well well-sm"> <h1 style="margin-left:100px;"> All projects</h1> </div>
 <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#filterForm">Filter</button>
 <div id="filterForm" class="collapse">
     @using (Html.BeginForm())
@@ -45,13 +45,12 @@
     }
 </div>
 <br>
-   <h2>List of projects <sup><span class="badge"> @ViewBag.Count </span></sup></h2>
 
      <p>
-        @Html.ActionLink("Create New", "Create", "",new { @class = "btn btn-success" })
+        <button id='newProject' class="btn btn-primary btn-lg">New project</button>
     </p>
-    <h3> All projects </h3>
-    <table class="table">
+    <h3> All projects <sup><span class="badge"> @ViewBag.Count </span></sup></h3>
+    <table class="table table-striped">
         <tr>
             <th>
                 @Html.DisplayName("Serial Number")
@@ -114,3 +113,20 @@ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.Page
 
 @Html.PagedListPager(Model, page => Url.Action("Index",
     new { page }))
+
+    <div id='newProjectModal' class="modal fade" role="dialog" data-url='@Url.Action("Create")'>
+        <div id='projectContainer'></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#newProject').click(function() {
+                var url = $('#newProjectModal').data('url');
+
+                $.get(url, function(data) {
+                    $('#projectContainer').html(data);
+                     $('#newProjectModal').modal('show');
+                });
+             });
+        });
+    </script>

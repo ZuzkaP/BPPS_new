@@ -201,9 +201,12 @@ namespace BPPS.Controllers
         // GET: Projects/Create
         public ActionResult Create()
         {
-            return View();
+            return PartialView();
         }
-
+        public ActionResult Create2()
+        {
+            return View("Create");
+        }
         // POST: Projects/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -218,7 +221,7 @@ namespace BPPS.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(projects);
+            return PartialView(projects);
         }
 
         // GET: Projects/Edit/5

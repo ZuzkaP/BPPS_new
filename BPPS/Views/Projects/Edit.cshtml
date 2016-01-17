@@ -97,8 +97,10 @@
 </table>
 }
 
-<div>
-    @Html.ActionLink("Back", "IndexMy", "", new { @class = "btn btn-primary" })
+<div class="row">
+    <div class="col-sm-2">
+        @Html.ActionLink("Back", "", "", new { @class = "btn btn-primary btn-block", href = Request.UrlReferrer})
+     </div>
 </div>
 
 @section Scripts {

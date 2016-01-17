@@ -40,9 +40,11 @@
         <input type="hidden" value="@ViewBag.feedback_id" name="feedback_id">
 
         <br>
+        
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                @Html.ActionLink("Back", "", "", new { @class = "btn btn-warning" }, new { @class = "btn btn-warning", href = Request.UrlReferrer})
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
         </div>
     </div>

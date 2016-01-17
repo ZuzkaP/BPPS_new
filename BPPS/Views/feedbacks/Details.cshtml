@@ -95,9 +95,6 @@
                 else { <i> @answer.comment </i> } </td>
         </tr>
     }
-    <tr>
-        <th> @Html.ActionLink("Edit", "Edit", new { id = Model.feedback_id }, new { @class = "btn btn-warning" })  </th>
-    </tr>
 </table>
 
 <canvas id="myChart" width="800" height="400"></canvas>
@@ -130,9 +127,10 @@
 </script>
 
 <p></p>
-<p>
-    @Html.ActionLink("Back (My Feedbacks)", "IndexMy", "", new { @class = "btn btn-primary" })
-    @Html.ActionLink("Back (All Feedbacks)", "Index", "", new { @class = "btn btn-primary" })
-</p>
+<div class="row">
+    <div class="col-sm-2">
+        @Html.ActionLink("Back", "", "", new { @class = "btn btn-primary btn-block", href = Request.UrlReferrer})
+     </div>
+</div>
 
 

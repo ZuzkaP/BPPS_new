@@ -11,10 +11,9 @@
     <div class="alert alert-success"><b>Success!</b> @TempData["initiated_feedback"]</div>
 }
 
-<div class="page-header"> <h1> Feedbacks on my projects </h1> </div>
+<div class="well well-sm"> <h1> Feedbacks on my projects </h1> </div>
 <br>
-<h2 style="margin-left:100px;"> List of feedbacks </h2>
-<table class="table table-hover" style="border-radius:5px;">
+<table class="table table-striped" style="border-radius:5px;">
     <tr>
         <th>
             @Html.DisplayName("Project ID")
@@ -58,7 +57,8 @@
                 @Html.DisplayFor(modelItem => item.received)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
+                @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) 
+                @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
@@ -66,38 +66,38 @@
             <td>
                 @if (item.initiated == null)
                 {
-                    @Html.ActionLink("Initialize", "SendFeedbackEmail2", new { id = item.feedback_id })
+                    @Html.ActionLink("Initialize", "SendFeedbackEmail2", new { id = item.feedback_id }, new{@class = "btn btn-success"})
+                }
+                else if(item.initiated != null && item.received == null)
+                {
+                    @Html.ActionLink("Remind", "SendFeedbackEmail2", new { id = item.feedback_id }, new{@class = "btn btn-success"})
+                }
+                else if (item.initiated != null && item.received != null)
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id }, new{@class = "btn btn-info"})
                 }
 
             </td>
             <td>
                 @if (item.initiated == null)
                 {
-                    @Html.ActionLink("Edit", "Edit", "feedback_questions", new { id = item.feedback_id }, null)
+                    @Html.ActionLink("Edit", "Edit", "feedback_questions", new { id = item.feedback_id }, new{@class ="btn btn-warning"})
                 }
-            </td>
-            <td>
-                @if (item.initiated != null && item.received != null)
+                else if (item.initiated != null && item.received != null)
                 {
-                    @Html.ActionLink("Details", "Details", new { id = item.feedback_id })
+                    <a href="@Url.Action("PrintPDF", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
                 }
             </td>
             <td>
                 @if (item.initiated == null && item.received == null)
                 {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.feedback_id })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.feedback_id }, new{@class = "btn btn-danger"})
+                }
+                else if (item.initiated != null && item.received != null)
+                {
+                    <a href="@Url.Action("ExportData", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
                 }
             </td>
-            @if (item.initiated != null && item.received != null)
-            {
-                <td>
-
-                    <a href="@Url.Action("PrintPDF", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/pdf_download.png" width="30" height="30" /></a>
-                </td>
-                <td>
-                    <a href="@Url.Action("ExportData", "feedbacks", new { id = item.feedback_id })"><img src="~/Content/Images/excel_download.png" width="30" height="30" /></a>
-                </td>
-            }
         </tr>
     }
 
