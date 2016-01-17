@@ -51,10 +51,24 @@
                 @Html.DisplayFor(modelItem => item.Projects.name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.initiated)
+                @if (item.initiated != null)
+                {
+                    @Html.DisplayFor(modelItem => item.initiated)
+                }
+                else
+                {
+                    <i>@Html.DisplayName("Not initiated")</i>
+                }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.received)
+                @if (item.received != null)
+                {
+                    @Html.DisplayFor(modelItem => item.received)
+                }
+                else
+                {
+                    <i>@Html.DisplayName("Not received")</i>
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AspNetUsers.FirstName) @Html.DisplayFor(modelItem => item.AspNetUsers.LastName)

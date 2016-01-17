@@ -26,7 +26,14 @@
                 @Html.DisplayFor(modelItem => item.locations.town)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.departments2.name)
+                @if (item.departments2 != null)
+                {
+                    @Html.DisplayFor(modelItem => item.departments2.name)
+                }
+                else
+                {
+                    <i>@Html.DisplayName("No sub-department")</i>
+                }
             </td>
             <td>
                 <!--@Html.ActionLink("Edit", "Edit", new { id=item.department_id }, new{@class = "btn btn-warning"})--> 
