@@ -221,13 +221,16 @@ namespace BPPS.Controllers
 
                 string[] emails = new string[Email.Count];
 
-                foreach (var fee in fe)
-                {
-                    emails[i] = fee.AspNetUsers.Email;
-                    i++;
-                }
+                
+                    foreach (var fee in fe)
+                    {
+                        emails[i] = fee.AspNetUsers.Email;
+                        i++;
+                    }
 
-                ViewBag.hasFeedback = emails;
+                    ViewBag.hasFeedback = emails;
+                
+                
 
 
                 //feedback = db.feedback_questions.Where(fq => fq.feedbacks.Projects.project_id == project_id && fq.feedbacks.Id == user_id.Id).ToList();
@@ -478,7 +481,7 @@ namespace BPPS.Controllers
             return View(feedbacks);
         }
 
-        [Authorize(Roles = "admin, siemens")]
+        [Authorize(Roles = "admin, siemens, partner")]
         // GET: feedbacks/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -494,7 +497,7 @@ namespace BPPS.Controllers
             return View(feedbacks);
         }
 
-        [Authorize(Roles = "admin, siemens")]
+        [Authorize(Roles = "admin, siemens, partner")]
         // POST: feedbacks/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

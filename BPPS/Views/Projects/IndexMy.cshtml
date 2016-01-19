@@ -8,10 +8,11 @@
     @using (Html.BeginForm())
     {
         <p>
-            <table style="width:100%;">
-                <tr>
-                    <td colspan="4"><h2 style="margin-left: 100px;">Search projects</h2></td>
-                </tr>
+            <tr>
+                <td colspan="4"><h2 style="margin-left: 100px;">Search projects</h2></td>
+            </tr>
+            <table style="width:150%"; align="center";>
+                
                 <tr>
                     <td>Location:</td>
                     <td>@Html.DropDownList("location", null, "All", new { @class = "form-control" }) </td>
@@ -19,13 +20,10 @@
                     <td>@Html.DropDownList("segment", null, "All", new { @class = "form-control" })</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
                     <td>Project Status:</td>
                     <td>@Html.DropDownList("status", null, "All", new { @class = "form-control" })</td>
                     <td>BPSS Status:</td>
-                    <td>@Html.DropDownList("bpssStatus",null, "All", new { @class = "form-control" })</td>
+                    <td>@Html.DropDownList("bpssStatus", null, "All", new { @class = "form-control" })</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
